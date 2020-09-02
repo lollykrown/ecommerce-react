@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
+import Product from './Product';
 
 class ProductList extends Component {
   
   render(){
     return (
-      <React.Fragment>
-        <h3>Hello from app</h3>
-      </React.Fragment>
+        <div>
+        <Product></Product>
+      </div>
     );
   }
 }
