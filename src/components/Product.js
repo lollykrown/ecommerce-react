@@ -15,6 +15,14 @@ class Product extends Component {
                 <Link to="/details">
                   <img src={img} alt="product" className="card-img-top"/>
                 </Link>
+                <button className="cart-btn" disabled={ inCart?true:false }
+                onClick={()=> {console.log('added to cart')}}>
+
+                  {inCart?(<p className="text-capitalize mb-0" disabled>
+                    {""} in Cart</p>):
+                  (<i className="fas fa-cart-plus" />)}
+                  
+                </button>
               </div>
             </div>
         </ProductWrapper>
@@ -23,22 +31,22 @@ class Product extends Component {
 }
 
 const ProductWrapper = styled.div`
-    text-transform:capitalize;
-    font-size:1.4rem;
-    background:transparent;
-    border:0.125rem solid var(--lightBlue);
-    color:var(--lightBlue);
-    border-radius: 0.5rem;
-    padding: 0.2rems 0.5rem
-    cursor: pointer;
-    margin: 0.2rem 0.5rem 0.2rem 0;
-    transition: all 0.5s ease-in-out;
-    &:hover{
-    background: var(--lightBlue);
-    color: var(--mainBlue);
-    }
-    &:focus{
-    outline:none;
-    }
+    // text-transform:capitalize;
+    // font-size:1.4rem;
+    // background:transparent;
+    // border:0.125rem solid var(--lightBlue);
+    // color:var(--lightBlue);
+    // border-radius: 0.5rem;
+    // padding: 0.2rems 0.5rem
+    // cursor: pointer;
+    // margin: 0.2rem 0.5rem 0.2rem 0;
+    // transition: all 0.5s ease-in-out;
+    // &:hover{
+    // background: var(--lightBlue);
+    // color: var(--mainBlue);
+    // }
+    // &:focus{
+    // outline:none;
+    // }
 `;
 export default Product;
