@@ -10,7 +10,7 @@ class ProductList extends Component {
     products: storeProducts
   };
   render(){
-    
+
     console.log(this.state.products)
     return (
         <React.Fragment>
@@ -21,7 +21,11 @@ class ProductList extends Component {
               <div className="row">
                 <ProductConsumer>
                   {value => {
-                    console.log(value)
+                    return value.products.map((p)=> {
+                      return <Product key={p.id}>
+                        {p}
+                        </Product>
+                    })
                   }}
                 </ProductConsumer>
               </div>
