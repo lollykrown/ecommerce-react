@@ -21,10 +21,9 @@ class ProductList extends Component {
               <div className="row">
                 <ProductConsumer>
                   {value => {
-                    return value.products.map((p)=> {
-                      return <Product key={p.id}>
-                        {p}
-                        </Product>
+                    return value.products.map(product => {
+                      return <Product key={product.id}
+                      product={product}/>
                     })
                   }}
                 </ProductConsumer>
