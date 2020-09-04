@@ -11,7 +11,7 @@ class Product extends Component {
       <ProductWrapper className="col-9 mx-auto col-md col-lg-3 my-3">
         <div className="card">
           <ProductConsumer>
-            {(value) => (
+            {value => (
               <div className="img-container p-5" 
               onClick={()=>{value.handleDetail(id)}}>
                 <Link to="/details">
@@ -21,7 +21,8 @@ class Product extends Component {
                   className="cart-btn"
                   disabled={inCart ? true : false}
                   onClick={() => {
-                    value.addToCart(id)
+                    value.addToCart(id);
+                    value.openModal(id);
                   }}
                 >
                   {inCart ? (
@@ -74,7 +75,7 @@ const ProductWrapper = styled.div`
       box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.2);
     }
     .card-footer {
-      background: rgba(247, 247, 247);
+      background: rgba(222, 247, 222);
     }
   }
   .img-container {
@@ -98,7 +99,7 @@ const ProductWrapper = styled.div`
     font-size: 1.4rem;
     border-radius: 0.5rem 0 0 0;
     transform: translate(100%, 100%);
-    transition: all 1s linear;
+    transition: all 0.5s linear;
   }
   .img-container:hover .cart-btn {
     transform: translate(0, 0);
