@@ -1,11 +1,12 @@
 import React, { Component } from "react";
+import { ProductConsumer } from "../../context";
+import CartList from "./CartList";
 import Title from "../Title";
 import CartColumns from "./CartColumns";
 import EmptyCart from "./EmptyCart";
-import { ProductConsumer } from "../../context";
-import CartList from "./CartList";
+import CartTotal from "./CartTotal";
 
-class Cart extends Component {
+export default class Cart extends Component {
   render() {
     return (
       <section>
@@ -18,6 +19,7 @@ class Cart extends Component {
                   <Title name="your" title="cart" />
                   <CartColumns />
                   <CartList value={value} />
+                  <CartTotal />
                 </React.Fragment>
               );
             } else {
@@ -29,5 +31,3 @@ class Cart extends Component {
     );
   }
 }
-
-export default  Cart

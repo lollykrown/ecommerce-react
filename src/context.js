@@ -10,8 +10,9 @@ class ProductProvider extends Component {
     cart: [],
     modalOpen: false,
     modalProduct:detailProduct,
-    cartSubtotal:0,
-    cartTax:0
+    cartSubtotal:10,
+    cartTax:20,
+    cartTotal:30
   };
   componentDidMount() {
     this.setProducts();
@@ -80,7 +81,7 @@ class ProductProvider extends Component {
     console.log('remove item method')
   }
 
-  clearCart = id => {
+  clearCart = () => {
     console.log('clear cart method')
   }
 
