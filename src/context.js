@@ -9,7 +9,7 @@ class ProductProvider extends Component {
     detailProduct,
     cart: [],
     modalOpen: true,
-    modalproduct:detailProduct
+    modalProduct:detailProduct
   };
   componentDidMount() {
     this.setProducts();
@@ -37,7 +37,7 @@ class ProductProvider extends Component {
     });
   };
 
-  addTocart = (id) => {
+  addToCart = (id) => {
     let tempProducts = [...this.state.products];
     const index = tempProducts.indexOf(this.getItem(id));
     const product = tempProducts[index];
@@ -71,7 +71,7 @@ class ProductProvider extends Component {
         value={{
           ...this.state,
           handleDetail: this.handleDetail,
-          addTocart: this.addTocart,
+          addToCart: this.addToCart,
           openModal:this.openModal,
           closeModal: this.closeModal
         }}
