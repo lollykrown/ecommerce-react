@@ -1,52 +1,62 @@
 import React, { Component } from 'react';
-import Carousel from 'react-bootstrap/Carousel'  
+import styled from "styled-components";
 
 class MyCarousel extends Component {
   
   render(){
     console.log(this.props)
-    return (
-        <div>
-         <div class='container-fluid' > 
-          <div className="row title" style={{ marginBottom: "20px" }} >  
-          <div class="col-sm-12 btn btn-warning">  
-          How To Use Bootstrap Carousel In ReactJS  
+    return ( 
+        <CarouselWrapper>
+          <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+              <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+              <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="img/800x400.jpg" class="d-block w-100" alt="..."/>
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>First slide label</h5>
+                  <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="img/800x400.jpg" class="d-block w-100" alt="..."/>
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Second slide label</h5>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="img/800x400.jpg" class="d-block w-100" alt="..."/>
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Third slide label</h5>
+                  <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                </div>
+              </div>
             </div>
-         </div>  
-         </div>  
-         <div className="container-fluid"    >   
-         <Carousel interval={2000} keyboard={false} pauseOnHover={true}>   
-         <Carousel.Item style={{'height':"300px"}} >  
-         <img style={{'height':"300px"}}  
-         className="d-block w-100"  
-        src={'assets/img/img2.jpg'}  />  
-           <Carousel.Caption>  
-             <h3>First Demo </h3>  
-                 </Carousel.Caption>  
-                 </Carousel.Item  >  
-                 <Carousel.Item style={{'height':"300px"}}>  
-                 <img style={{'height':"300px"}}     
-                   className="d-block w-100"  
-                    src={'assets/img/img1.jpg'}    />  
-                       <Carousel.Caption>  
-                   <h3>Second Demo</h3>  
-                   </Carousel.Caption>  
-                         </Carousel.Item>  
-                       <Carousel.Item style={{'height':"300px"}}>  
-                       <img style={{'height':"300px"}}     
-                        className="d-block w-100"  
-                         src={'assets/'}    /> 
-                        <Carousel.Caption>  
-                          <h3>Third Demo</h3>  
-                          </Carousel.Caption>  
-                         </Carousel.Item>  
-                        </Carousel>  
-                        </div>
-                    
-        </div>  
-        
+            <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+
+        </CarouselWrapper>
     );
   }
 }
 
+const CarouselWrapper = styled.nav`
+  background: var(--mainPurple) !important;
+  .nav-link {
+    color: var(--mainWhite);
+    font-size: 1.3rem;
+    text-transform: capitalize;
+  }
+`;
 export default MyCarousel;

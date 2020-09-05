@@ -2,6 +2,7 @@
   --mainBlue: #2a2a72;
   --lightBlue:#009ffd;
   --mainWhite:#ffffff;
+  --bodyBg: #f5f5f5;
   --mainDark:#232528;
   --mainYellow:#ffa400;
   --mainPurple: #ed017f;
@@ -10,7 +11,7 @@
 body{
   /* font-family: 'Oswald', sans-serif !important; */
   font-family: Helvetica,sans-serif;
-  background: var(--mainWhite) !important;
+  background: var(--bodyBg) !important;
   color: var(--mainDark) !important
 }
 .text-title{
@@ -57,4 +58,10 @@ body{
   color: var(--mainDark) !important;
   background-color: var(--mainWhite);
   /* margin: 0 */
+}
+.custom-bg {
+  background-color: var(--mainWhite);
+}
+.custom-padd {
+  margin: 0 10rem;
 }

@@ -7,9 +7,21 @@ import ControlledCarousel from "./ControlledCarousel";
 export default class Home extends Component {
   render() {
     return (
-      <section>
+      <section className="container-fluid">
         {/* <ProductConsumer> */}
-          <ControlledCarousel/>
+        <div className="custom-padd">
+        <div className="row">
+          <div className="col-10 col-lg-8 order-md-1 order-lg-2">
+            <MyCarousel/>
+          </div>
+          <div className="col-lg-2 custom-bg">
+            <h1>left side bar</h1>
+          </div>
+          <div className="col-lg-2 custom-bg order-sm-3 order-lg-3">
+            <h1>Right side bar</h1>
+          </div>
+        </div>
+        </div>
           {/* {(value) => {
             const { cart } = value;
             if (cart.length > 0) {
