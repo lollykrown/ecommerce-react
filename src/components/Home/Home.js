@@ -37,28 +37,28 @@ export default class Home extends Component {
           </div>
         </div>
         <div className="row my-3">
-            <div className="col-6 col-lg-3 pl-0">
+            <div className="col-6 col-lg-3 pl-2 my-2">
               <div className="card">
                 <div className="card-body">
                   This is some text within a card.
                 </div>
               </div>
             </div>
-            <div className="col-6 col-lg-3 pl-0 pr-2">
+            <div className="col-6 col-lg-3 px-2 my-2">
               <div className="card">
                 <div className="card-body">
                   This is some text within a card.
                 </div>
               </div>
             </div>
-            <div className="col-6 col-lg-3 pl-0 pr-2">
+            <div className="col-6 col-lg-3 px-2 pr-2 my-2">
               <div className="card">
                 <div className="card-body">
                   This is some text within a card.
                 </div>
               </div>
             </div>
-            <div className="col-6 col-lg-3 pr-0 pl-2">
+            <div className="col-6 col-lg-3 pr-0 px-2 my-2">
               <div className="card">
                 <div className="card-body">
                   This is some text within a card.
@@ -67,7 +67,7 @@ export default class Home extends Component {
             </div>
           </div>
         </div>
-        <Frame/>
+        <Frame className="mx-xs-0 mx-lg-4 px-lg-4"/>
           {/* {(value) => {
             const { cart } = value;
             if (cart.length > 0) {
