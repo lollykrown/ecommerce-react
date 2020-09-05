@@ -39,30 +39,15 @@ class Navbar extends Component {
                 Store Locator
               </Link>
             </li>
-            <li className="nav-item dropdown">
-              <Link
-              to="/"
-                className="nav-link dropdown-toggle"
-                id="navbarDropdown"
-                role="button"
-                data-toggle="dropdown"
-                aria-haspopup="true"
-                aria-expanded="false"
-              >
-                Help
+            <li className="nav-item ml-4">
+              <Link to="/" className="nav-link">
+                help
               </Link>
-              <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a className="dropdown-item">
-                  Action
-                </a>
-                <a className="dropdown-item" >
-                  Another action
-                </a>
-                <div className="dropdown-divider"></div>
-                <a className="dropdown-item" >
-                  Something else here
-                </a>
-              </div>
+            </li>
+            <li className="nav-item ml-4">
+              <Link to="/" className="nav-link">
+                contact us
+              </Link>
             </li>
           </ul>
           <form className="form-inline ml-auto my-2 my-lg-0">

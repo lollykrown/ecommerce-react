@@ -7,7 +7,7 @@ export default function Item({item}) {
   return (
       <div className="row my-2 text-capitalize">
         <div className="">
-        <Link to="/details" class="black titl">
+        <Link to="/details" className="black titl">
           <i className={item.icon}></i>
           {/* <img className="img-fluid" src={'img'} /> */}
           <span className="ml-3">{item.name} </span>
