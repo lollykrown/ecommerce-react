@@ -12,12 +12,12 @@ export default class Frame extends Component {
                 <div className="card mb-3">
                     <div className="row no-gutters">
                         <div className="col-md-4">
-                            <img src="..." className="card-img" alt="..."/>
+                            <img src="img/product-1.png" className="card-img" alt="..."/>
                         </div>
                         <div className="col-md-8">
                             <div className="card-body">
                                 <h5 className="card-title">A phone called samsung</h5>
-                                <p className="card-text">N18000</p>
+                                <p className="card-text">&#8358; 18000</p>
                                 <p className="card-text"><small className="text-muted">Discount</small></p>
                             </div>
                         </div>
@@ -28,12 +28,12 @@ export default class Frame extends Component {
                 <div className="card mb-3">
                     <div className="row no-gutters">
                         <div className="col-md-4">
-                            <img src="..." className="card-img" alt="..."/>
+                            <img src="img/product-3.png" className="card-img" alt="..."/>
                         </div>
                         <div className="col-md-8">
                             <div className="card-body">
                                 <h5 className="card-title">A phone called samsung</h5>
-                                <p className="card-text">N18000</p>
+                                <p className="card-text">&#8358; 18000</p>
                                 <p className="card-text"><small className="text-muted">Discount</small></p>
                             </div>
                         </div>
@@ -44,12 +44,12 @@ export default class Frame extends Component {
                 <div className="card mb-3">
                     <div className="row no-gutters">
                         <div className="col-md-4">
-                            <img src="..." className="card-img" alt="..."/>
+                            <img src="img/product-2.png" className="card-img" alt="..."/>
                         </div>
                         <div className="col-md-8">
                             <div className="card-body">
                                 <h5 className="card-title">A phone called samsung</h5>
-                                <p className="card-text">N18000</p>
+                                <p className="card-text">&#8358; 18000</p>
                                 <p className="card-text"><small className="text-muted">Discount</small></p>
                             </div>
                         </div>
