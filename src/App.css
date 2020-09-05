@@ -68,3 +68,8 @@ body{
     padding: 0 10rem !important;
   }
 }
+a{
+  text-decoration: none;
+  color: var(--mainDark);
+  font-size: 0.8rem;
+}
