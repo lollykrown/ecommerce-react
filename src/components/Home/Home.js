@@ -1,27 +1,72 @@
 import React, { Component } from "react";
 import { ProductConsumer } from "../../context";
 import MyCarousel from "./MyCarousel";
-import ControlledCarousel from "./ControlledCarousel";
+import ItemList from "./ItemList";
 
 
 export default class Home extends Component {
   render() {
     return (
-      <section className="container-fluid">
+      <section className="container-fluid my-3 custom-padd">
         {/* <ProductConsumer> */}
-        <div className="custom-padd">
+        <div className="mx-sm-0 mx-lg-4 px-lg-4">
         <div className="row">
           <div className="col-10 col-lg-8 order-md-1 order-lg-2">
             <MyCarousel/>
           </div>
           <div className="col-lg-2 custom-bg">
-            <h1>left side bar</h1>
+            <ItemList />
           </div>
           <div className="col-lg-2 custom-bg order-sm-3 order-lg-3">
-            <h1>Right side bar</h1>
+            <div class="card my-2">
+              <div class="card-body">
+                This is some text within a card body.
+              </div>
+            </div>
+            <div class="card my-2">
+              <div class="card-body">
+                This is some text within a card body.
+              </div>
+            </div>
+            <div class="card my-2">
+              <div class="card-body">
+                This is some text within a card body.
+              </div>
+            </div>
           </div>
         </div>
+        <div className="row my-3">
+            <div className="col-6 col-lg-3 pl-0">
+              <div className="card">
+                <div className="card-body">
+                  This is some text within a card.
+                </div>
+              </div>
+            </div>
+            <div className="col-6 col-lg-3 pl-0 pr-2">
+              <div className="card">
+                <div className="card-body">
+                  This is some text within a card.
+                </div>
+              </div>
+            </div>
+            <div className="col-6 col-lg-3 pl-0 pr-2">
+              <div className="card">
+                <div className="card-body">
+                  This is some text within a card.
+                </div>
+              </div>
+            </div>
+            <div className="col-6 col-lg-3 pr-0 pl-2">
+              <div className="card">
+                <div className="card-body">
+                  This is some text within a card.
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+        
           {/* {(value) => {
             const { cart } = value;
             if (cart.length > 0) {

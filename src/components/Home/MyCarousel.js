@@ -12,26 +12,42 @@ class MyCarousel extends Component {
               <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
               <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
               <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+              <li data-target="#carouselExampleCaptions" data-slide-to="3"></li>
+              <li data-target="#carouselExampleCaptions" data-slide-to="4"></li>
             </ol>
             <div class="carousel-inner">
               <div class="carousel-item active">
-                <img src="img/800x400.jpg" class="d-block w-100" alt="..."/>
+                <img src="img/ex.jpeg" class="d-block w-100" alt="..."/>
                 <div class="carousel-caption d-none d-md-block">
                   <h5>First slide label</h5>
                   <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
                 </div>
               </div>
               <div class="carousel-item">
-                <img src="img/800x400.jpg" class="d-block w-100" alt="..."/>
+                <img src="img/ex2.jpg" class="d-block w-100" alt="..."/>
                 <div class="carousel-caption d-none d-md-block">
                   <h5>Second slide label</h5>
                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                 </div>
               </div>
               <div class="carousel-item">
-                <img src="img/800x400.jpg" class="d-block w-100" alt="..."/>
+                <img src="img/ex5.jpg" class="d-block w-100" alt="..."/>
                 <div class="carousel-caption d-none d-md-block">
                   <h5>Third slide label</h5>
+                  <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="img/ex4.jpg" class="d-block w-100" alt="..."/>
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Fourth slide label</h5>
+                  <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="img/ex5.jpg" class="d-block w-100" alt="..."/>
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Fifth slide label</h5>
                   <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
                 </div>
               </div>

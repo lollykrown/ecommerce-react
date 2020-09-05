@@ -62,6 +62,9 @@ body{
 .custom-bg {
   background-color: var(--mainWhite);
 }
-.custom-padd {
-  margin: 0 10rem;
+
+@media (min-width: 992px){
+  .custom-padd {
+    padding: 0 10rem !important;
+  }
 }
