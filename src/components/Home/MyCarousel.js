@@ -17,7 +17,7 @@ class MyCarousel extends Component {
             </ol>
             <div className="carousel-inner">
               <div className="carousel-item active">
-                <img src="img/ex.jpeg" className="d-block w-100" alt="..."/>
+                <img src="img/ex.jpg" className="d-block w-100" alt="..."/>
                 {/* <div className="carousel-caption d-none d-md-block">
                   <h5>First slide label</h5>
                   <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
@@ -31,7 +31,7 @@ class MyCarousel extends Component {
                 </div> */}
               </div>
               <div className="carousel-item">
-                <img src="img/ex5.jpg" className="d-block w-100" alt="..."/>
+                <img src="img/ex3.jpg" className="d-block w-100" alt="..."/>
                 {/* <div className="carousel-caption d-none d-md-block">
                   <h5>Third slide label</h5>
                   <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>

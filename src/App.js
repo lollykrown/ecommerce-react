@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
 import { Switch, Route } from 'react-router-dom'
 import './App.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/popper.min.js';
-import 'popper.js/dist/umd/popper.min.js';
-import 'jquery/dist/jquery.min.js';
 // import 'bootstrap/dist/js/popper.min.js';
+import 'popper.js/dist/umd/popper.min.js';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'jquery/dist/jquery.min.js';
 import 'bootstrap/dist/js/bootstrap.min.js';
 import Navbar from './components/Navbar';
 import ProductList from './components/ProductList';
