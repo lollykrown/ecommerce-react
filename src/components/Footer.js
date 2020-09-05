@@ -8,7 +8,7 @@ class Footer extends Component {
         <div className="container">
           <div className="row">
             <div className="col-10 col-lg-2">
-                <h1>hello from footer</h1>
+                <h1>hello from footer. erhhh mynhgvfmv hhthhh</h1>
             </div>
             <div className="col-10 col-lg-2">
                 <h1>hello from footer</h1>

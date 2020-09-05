@@ -20,11 +20,11 @@ class Navbar extends Component {
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span class="navbar-toggler-icon"></span>
+          <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav align-items-center">
-            <li class="nav-item active ml-2">
+            <li className="nav-item active ml-2">
               <Link to="/" className="nav-link">
                 Home <span className="sr-only">(current)</span>
               </Link>
@@ -51,15 +51,15 @@ class Navbar extends Component {
               >
                 Help
               </Link>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">
+              <div className="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a className="dropdown-item" href="#">
                   Action
                 </a>
-                <a class="dropdown-item" href="#">
+                <a className="dropdown-item" href="#">
                   Another action
                 </a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">
+                <div className="dropdown-divider"></div>
+                <a className="dropdown-item" href="#">
                   Something else here
                 </a>
               </div>

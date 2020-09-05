@@ -20,18 +20,18 @@ export default class Home extends Component {
                 <ItemList />
               </div>
               <div className="col-lg-2 custom-bg order-sm-3 order-lg-3">
-                <div class="card my-2">
-                  <div class="card-body">
+                <div className="card my-2">
+                  <div className="card-body">
                     This is some text within a card body.
                   </div>
                 </div>
-                <div class="card my-2">
-                  <div class="card-body">
+                <div className="card my-2">
+                  <div className="card-body">
                     This is some text within a card body.
                   </div>
                 </div>
-                <div class="card my-2">
-                  <div class="card-body">
+                <div className="card my-2">
+                  <div className="card-body">
                     This is some text within a card body.
                   </div>
                 </div>
@@ -41,28 +41,28 @@ export default class Home extends Component {
           <div className="container">
             <div className="row my-3">
               <div className="col-6 col-lg-3 pl-0 pr-2 ">
-                <div className="card">
-                  <div className="card-body">
-                    This is some text within a card.
-                  </div>
-                </div>
-              </div>
-              <div className="col-6 col-lg-3 pr-2 ">
-                <div className="card">
+                <div className="card bg-primary">
                   <div className="card-body">
                     This is some text within a card.
                   </div>
                 </div>
               </div>
               <div className="col-6 col-lg-3 pr-2">
-                <div className="card">
+                <div className="card bg-warning">
+                  <div className="card-body">
+                    This is some text within a card.
+                  </div>
+                </div>
+              </div>
+              <div className="col-6 col-lg-3 pr-2">
+                <div className="card bg-info">
                   <div className="card-body">
                     This is some text within a card.
                   </div>
                 </div>
               </div>
               <div className="col-6 col-lg-3 pr-0">
-                <div className="card">
+                <div className="card  bg-danger">
                   <div className="card-body">
                     This is some text within a card.
                   </div>

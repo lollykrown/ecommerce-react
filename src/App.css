@@ -73,19 +73,24 @@ body {
 .custom-bg {
   background-color: var(--mainWhite);
 }
-
+.black{
+  color: var(--footerBlack) !important;
+}
 @media (min-width: 992px) {
   .custom-padd {
     padding: 0 10rem !important;
   }
 }
 
-a {
+a, .titl {
   text-decoration: none;
-  color: var(--mainDark);
+  color: var(--footerBlack);
   font-size: 0.8rem;
 }
-
+.titl:hover{
+  text-decoration: none;
+  font-size: 0.85rem;
+}
 .fa-shopping-cart {
   font-size: 4.5em;
   color: var(--mainPurple);
@@ -104,4 +109,7 @@ a {
   background-color: var(--footerBlack);
   color: var(--mainWhite);
   padding: 2rem 0;
+  position:relative;
+  bottom:0;
+  width:100%
 }

@@ -6,7 +6,7 @@ export default function CartTotal({value, history}) {
   const { cartSubtotal, cartTax, cartTotal, clearCart } = value;
   return (
     <React.Fragment>
-      <div className="container">
+      <div className="container mb-4">
           <div className="row">
               <div className="col-10 mt-2 ml-sm-5 ml-md-auto col-sm-8 
               text-capitalize text-right">
