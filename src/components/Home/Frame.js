@@ -1,23 +1,35 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 import Title from "../Title";
 
 export default class Frame extends Component {
-  
-  render(){
-    console.log(this.props)
+  render() {
+    console.log(this.props);
     return (
-        <div className="container">
-            <Title name="thhhh" title=""/>
-           <div className="row">
-              <div className="col-10 mx-auto text-center text-title
-              text-uppercase pt-5">
-                <h1 className="display-3">4040</h1>
-                <h1>error</h1>
-                <h3> the requested URL<span className="text-danger">
-                  </span>{" "} was not found</h3>
-              </div>
-           </div>
+      <div className="container-fluid ml-3">
+        <Title name="Recommended for you" title="" />
+        <div className="row my-3">
+          <div className="col-6 col-lg-3 pl-0">
+            <div className="card">
+              <div className="card-body">This is some text within a card.</div>
+            </div>
+          </div>
+          <div className="col-6 col-lg-3 pl-0 pr-2">
+            <div className="card">
+              <div className="card-body">This is some text within a card.</div>
+            </div>
+          </div>
+          <div className="col-6 col-lg-3 pl-0 pr-2">
+            <div className="card">
+              <div className="card-body">This is some text within a card.</div>
+            </div>
+          </div>
+          <div className="col-6 col-lg-3 pr-0 pl-2">
+            <div className="card">
+              <div className="card-body">This is some text within a card.</div>
+            </div>
+          </div>
         </div>
+      </div>
     );
   }
 }

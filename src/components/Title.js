@@ -3,9 +3,9 @@ import styled from "styled-components";
 
 export default function Title({name, title}){
     return (
-        <TitleContainer className="row">
-            <div className="col-10 my-2 text-title">
-                <h1 className="text-capitalize textt">
+        <TitleContainer pos className="row">
+            <div className="col-12 mx-auto my-2 text-title">
+                <h1 className="text-capitalize text">
                     {name} <strong className="text-blue">{title}</strong>
                 </h1>
             </div>
