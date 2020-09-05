@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { ProductConsumer } from "../../context";
 import MyCarousel from "./MyCarousel";
 import ItemList from "./ItemList";
+import Frame from "./Frame";
 
 
 export default class Home extends Component {
@@ -66,7 +67,7 @@ export default class Home extends Component {
             </div>
           </div>
         </div>
-        
+        <Frame/>
           {/* {(value) => {
             const { cart } = value;
             if (cart.length > 0) {

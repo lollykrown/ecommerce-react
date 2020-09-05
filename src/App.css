@@ -10,7 +10,7 @@
 }
 body{
   /* font-family: 'Oswald', sans-serif !important; */
-  font-family: Helvetica,sans-serif;
+  font-family: 'Roboto', 'Helvetica',sans-serif;
   background: var(--bodyBg) !important;
   color: var(--mainDark) !important
 }
@@ -72,4 +72,11 @@ a{
   text-decoration: none;
   color: var(--mainDark);
   font-size: 0.8rem;
+}
+.fa-shopping-cart{
+  font-size: 4.5em;
+  color: var(--mainPurple);
+}
+.empty{
+  font-size: 0.9rem;
 }
