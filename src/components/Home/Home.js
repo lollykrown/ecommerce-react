@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { ProductConsumer } from "../../context";
+// import { ProductConsumer } from "../../context";
 import MyCarousel from "./MyCarousel";
 import ItemList from "./ItemList";
 import Frame from "./Frame";
@@ -25,7 +25,7 @@ export default class Home extends Component {
                     This is some text within a card body.
                   </div>
                 </div>
-                <div className="card my-2">
+                <div className="card my-2 blue-bg">
                   <div className="card-body">
                     This is some text within a card body.
                   </div>

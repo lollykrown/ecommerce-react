@@ -69,7 +69,10 @@ body {
   background-color: var(--mainWhite);
   /* margin: 0 */
 }
-
+.blue-bg {
+  background-color: var(--mainBlue) !important;
+  color: var(--mainWhite);
+}
 .custom-bg {
   background-color: var(--mainWhite);
 }
