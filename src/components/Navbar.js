@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { ProductConsumer } from "../context";
 import { Link } from "react-router-dom";
 import logo from "../logo.svg";
 import styled from "styled-components";
@@ -9,13 +10,13 @@ class Navbar extends Component {
     return (
       <NavWrapper className="navbar navbar-expand-sm bg-primary navbar-dark px-sm-5">
         {/* https://www.iconfinder.com/icons/1243689/call_phone_icon
-      Creative Commons (Attribution 3.0 Unported);
-      https://www.iconfinder.com/Makoto_msk */}
+            Creative Commons (Attribution 3.0 Unported);
+            https://www.iconfinder.com/Makoto_msk */}
         <Link to="/">
           <img src={logo} alt="store" className="navbar-brand" />
         </Link>
         <button
-          class="navbar-toggler"
+          className="navbar-toggler"
           type="button"
           data-toggle="collapse"
           data-target="#navbarSupportedContent"
@@ -25,35 +26,35 @@ class Navbar extends Component {
         >
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav align-items-center">
             <li class="nav-item active ml-2">
               <Link to="/" className="nav-link">
-                Home <span class="sr-only">(current)</span>
+                Home <span className="sr-only">(current)</span>
               </Link>
-            </li>            
-            <li className="nav-item ml-5">
+            </li>
+            <li className="nav-item ml-4">
               <Link to="/" className="nav-link">
                 products
               </Link>
             </li>
-            <li class="nav-item ml-2">
+            <li className="nav-item ml-2">
               <Link to="/" className="nav-link">
-              Store Locator
+                Store Locator
               </Link>
             </li>
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
+            <li className="nav-item dropdown">
+              <Link
+              to="/"
+                className="nav-link dropdown-toggle"
                 id="navbarDropdown"
                 role="button"
                 data-toggle="dropdown"
                 aria-haspopup="true"
                 aria-expanded="false"
               >
-                Dropdown
-              </a>
+                Help
+              </Link>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <a class="dropdown-item" href="#">
                   Action
@@ -67,37 +68,43 @@ class Navbar extends Component {
                 </a>
               </div>
             </li>
-            <li class="nav-item">
-              <a
-                class="nav-link disabled"
-                href="#"
-                tabindex="-1"
-                aria-disabled="true"
-              >
-                Disabled
-              </a>
-            </li>
           </ul>
-          <form class="form-inline ml-auto my-2 my-lg-0">
+          <form className="form-inline ml-auto my-2 my-lg-0">
             <input
-              class="form-control mr-sm-2"
+              className="form-control "
               type="search"
               placeholder="Search"
               aria-label="Search"
             />
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
-              Search
-            </button>
+            <span className="btn btn-warning text-white my-2 my-sm-0" type="submit">
+              <i className="fas fa-search"></i>
+            </span>
           </form>
-          <Link to="/cart" className="ml-auto">
-            <ButtonContainer>
-              <span >
-                <i className="fas fa-cart-plus mr-2"></i>
-              </span>
-              my cart
-              <span className="ml-2">0</span>
-            </ButtonContainer>
-          </Link>
+          <ul className="navbar-nav align-items-center ml-auto">
+            <li className="nav-item ml-4">
+              <Link to="/" className="nav-link">
+                sell
+              </Link>
+            </li>
+            <li className="nav-item ml-4">
+              <Link to="/" className="nav-link">
+                login/signup
+              </Link>
+            </li>
+          </ul>
+          <ProductConsumer>
+            {(value) => (
+              <Link to="/cart" className="ml-auto">
+                <ButtonContainer>
+                  <span>
+                    <i className="fas fa-cart-plus mr-2"></i>
+                  </span>
+                  my cart
+                  <span className="btn btn-white ml-2">{value.totalItems}</span>
+                </ButtonContainer>
+              </Link>
+            )}
+          </ProductConsumer>
         </div>
       </NavWrapper>
     );

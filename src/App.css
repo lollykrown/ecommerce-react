@@ -32,6 +32,14 @@ body{
   border-radius: 0 !important;
   border: 0.1rem solid var(--mainDark) !important;
 }
+.btn-white{
+  background: var(--mainWhite) !important;
+  font-size: 0.8rem !important;
+  color: var(--mainDark);
+  border-radius: 0 !important;
+  font-weight: bold !important;
+  padding: 0.05rem 0.5rem !important
+}
 .btn-black:hover{
   background: var(--mainDark) !important;
   color: var(--mainWhite);
@@ -40,4 +48,13 @@ body{
   cursor: pointer;
   font-size: 1.2rem;
   color: var(--mainYellow);
+}
+.nav-link{
+  font-size: 1.125rem !important;
+  /* color: var(--mainWhite) !important; */
+}
+.nav-link:hover{
+  color: var(--mainDark) !important;
+  background-color: var(--mainWhite);
+  /* margin: 0 */
 }

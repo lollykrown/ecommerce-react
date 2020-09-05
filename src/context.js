@@ -8,6 +8,7 @@ class ProductProvider extends Component {
     products: [],
     detailProduct,
     cart: [],
+    totalItems:0,
     modalOpen: false,
     modalProduct:detailProduct,
     cartSubtotal:0,
@@ -78,6 +79,7 @@ class ProductProvider extends Component {
     const product = tempCart[index];
     product.count += 1;
     product.total = product.count * product.price
+    
 
     this.setState(()=> {
       return {
@@ -146,7 +148,9 @@ class ProductProvider extends Component {
 
   addTotals = () => {
     let subTotal = 0;
+    let totalItems = 0
     this.state.cart.map(item => (subTotal+= item.total));
+    this.state.cart.map(item => (totalItems +=  item.count))
     const tempTax = subTotal * 0.1;
     const tax = parseFloat(tempTax.toFixed(2));
     const total = subTotal + tax;
@@ -154,7 +158,8 @@ class ProductProvider extends Component {
       return {
         cartSubtotal: subTotal,
         cartTax: tax,
-        cartTotal:total
+        cartTotal:total,
+        totalItems
       }
     })
   }
