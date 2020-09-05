@@ -5,10 +5,10 @@ export default class Frame extends Component {
   render() {
     console.log(this.props);
     return (
-      <div className="container-fluid mx-4 custom-bg">
+      <div className="container custom-bg">
         <Title name="Recommended for you" title="" />
         <div className="row my-4 ml-1">
-            <div className="col-6 col-lg-4 pl-0 pr-2 my-card">  
+            <div className="col-10 col-lg-4 pl-0 pr-2 my-card">  
                 <div class="card mb-3">
                     <div class="row no-gutters">
                         <div class="col-md-4">
@@ -24,7 +24,7 @@ export default class Frame extends Component {
                     </div>
                 </div>
             </div>
-            <div className="col-6 col-lg-4 pl-0 pr-2">  
+            <div className="col-10 col-lg-4 pl-0 pr-2">  
                 <div class="card mb-3">
                     <div class="row no-gutters">
                         <div class="col-md-4">
@@ -40,7 +40,7 @@ export default class Frame extends Component {
                     </div>
                 </div>
             </div>
-            <div className="col-6 col-lg-4 pl-0 pr-2">  
+            <div className="col-10 col-lg-4 pl-0 pr-2">  
                 <div class="card mb-3">
                     <div class="row no-gutters">
                         <div class="col-md-4">
