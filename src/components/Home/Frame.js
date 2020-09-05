@@ -6,7 +6,7 @@ export default class Frame extends Component {
     console.log(this.props);
     return (
       <div className="container custom-bg">
-        <Title name="Recommended for you" title="" />
+        <Title name="Recommended for you" title="" see="see more..." />
         <div className="row my-4 ml-1">
             <div className="col-10 col-lg-4 pl-0 pr-2 my-card">  
                 <div className="card mb-3">

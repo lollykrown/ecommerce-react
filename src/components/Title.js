@@ -1,14 +1,17 @@
 import React from 'react';
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
-export default function Title({name, title}){
+export default function Title({name, title, see}){
     return (
         <TitleContainer pos className="">
             <div className="row mx-auto my-2 ">
-                <h3 className="text-capitalize text col-9 ">
+                <h4 className="text-capitalize text col-9 ">
                     {name} <strong className="text-blue">{title}</strong>
-                </h3>
-                <span className="col-3 mr-0 sp">see more</span>
+                </h4>
+                <Link className="col-3 mt-2 sp">
+                    <span >{see}</span>
+                </Link>
             </div>
         </TitleContainer>
     )
@@ -18,6 +21,7 @@ const TitleContainer = styled.div`
     text-transform:capitalize;
     font-size:1.125rem;
     .sp{
-        float:right;
+        text-align: right;
+        font-size: 1rem;
     }
 `;
