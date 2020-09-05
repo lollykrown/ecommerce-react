@@ -3,6 +3,7 @@ import { ProductConsumer } from "../../context";
 import MyCarousel from "./MyCarousel";
 import ItemList from "./ItemList";
 import Frame from "./Frame";
+import TextFrame from "./TextFrame";
 
 export default class Home extends Component {
   render() {
@@ -71,6 +72,10 @@ export default class Home extends Component {
           </div>
         </div>
         <Frame className="mx-xs-0 mx-lg-4 px-lg-4" />
+        <Frame className="mx-xs-0 mx-lg-4 px-lg-4" />
+        <Frame className="mx-xs-0 mx-lg-4 px-lg-4" />
+        <TextFrame className="mx-xs-0 mx-lg-4 px-lg-4" />
+
         {/* {(value) => {
             const { cart } = value;
             if (cart.length > 0) {

@@ -9,7 +9,7 @@ export default function ItemList({ value }) {
     {id:4, icon:'fas fa-mobile', name:'phones & tablets'},
     {id:5, icon:'fas fa-laptop', name:'computing'},
     {id:6, icon:'fas fa-tablet', name:'electronics'},
-    {id:7, icon:'fas fa-shopping-bag', name:'fashion'},
+    {id:7, icon:'fas fa-tshirt', name:'fashion'},
     {id:8, icon:'fas fa-child', name:'baby products'},
     {id:9, icon:'fas fa-gamepad', name:'gaming'},
     {id:10,icon:'fas fa-futbol', name:'sporting goods'},
