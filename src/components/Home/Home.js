@@ -38,28 +38,28 @@ export default class Home extends Component {
               <div className="col-6 col-lg-3 pl-0 pr-2 ">
                 <div className="card bg-primary">
                   <div className="card-body">
-                    This is some text within a card.
+                    Buy Airtime
                   </div>
                 </div>
               </div>
               <div className="col-6 col-lg-3 pr-2">
                 <div className="card bg-warning">
                   <div className="card-body">
-                    This is some text within a card.
+                    Order Food Online
                   </div>
                 </div>
               </div>
               <div className="col-6 col-lg-3 pr-2">
                 <div className="card bg-info">
                   <div className="card-body">
-                    This is some text within a card.
+                    Book Airline Tickets Online
                   </div>
                 </div>
               </div>
               <div className="col-6 col-lg-3 pr-0">
                 <div className="card  bg-danger">
                   <div className="card-body">
-                    This is some text within a card.
+                    Stream Live Sport Online
                   </div>
                 </div>
               </div>
