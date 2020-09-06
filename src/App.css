@@ -83,6 +83,9 @@ body {
 .white{
   color: var(--mainWhite) !important;
 }
+.grey{
+  color: var(--mainGrey) !important;
+}
 @media (min-width: 992px) {
   .custom-padd {
     padding: 0 10rem !important;
@@ -161,4 +164,17 @@ a, .titl {
   width: 100%;
   height:0.125rem;
   background-color: var(--mainGrey);
+}
+
+
+.links {
+  list-style-type: none;
+  padding-inline-start: 0 !important;
+}
+.links a{
+  color: var(--mainGrey);
+}
+.links a:hover{
+  color: var(--mainPurple);
+  text-decoration: none;
 }
