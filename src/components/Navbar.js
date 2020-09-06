@@ -39,7 +39,7 @@ class Navbar extends Component {
                 Store Locator
               </Link>
             </li>
-            <li className="nav-item ml-4">
+            <li className="nav-item ml-4 d-none d-lg-block">
               <Link to="/" className="nav-link">
                 help
               </Link>
@@ -50,7 +50,7 @@ class Navbar extends Component {
               </Link>
             </li>
           </ul>
-          <form className="form-inline ml-auto my-2 my-lg-0">
+          <form className="form-inline d-none d-lg-block ml-auto my-2 my-lg-0">
             <input
               className="form-control "
               type="search"
@@ -75,7 +75,7 @@ class Navbar extends Component {
           </ul>
           <ProductConsumer>
             {(value) => (
-              <Link to="/cart" className="ml-auto">
+              <Link to="/cart" className="ml-auto ">
                 <ButtonContainer>
                   <span>
                     <i className="fas fa-cart-plus mr-2"></i>
