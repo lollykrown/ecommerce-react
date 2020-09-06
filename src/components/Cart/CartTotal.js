@@ -19,17 +19,17 @@ export default function CartTotal({value, history}) {
                   <h5>
                       <span className="text-title">
                         subtotal : </span>
-                      <strong>$ {cartSubtotal}</strong>
+                      <strong>&#8358; {cartSubtotal}</strong>
                   </h5>
                   <h5>
                       <span className="text-title">
                         tax : </span>
-                      <strong>$ {cartTax}</strong>
+                      <strong>&#8358; {cartTax}</strong>
                   </h5>
                   <h5>
                       <span className="text-title">
                         total : </span>
-                      <strong>$ {cartTotal}</strong>
+                      <strong>&#8358; {cartTotal}</strong>
                   </h5>
                   <PayPalButton total={cartTotal} 
                   clearCart={clearCart} history={history}/>

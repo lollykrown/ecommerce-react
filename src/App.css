@@ -91,11 +91,10 @@ body {
 a, .titl {
   text-decoration: none;
   color: var(--footerBlack);
-  font-size: 0.8rem;
 }
 .titl:hover{
   text-decoration: none;
-  font-size: 0.85rem;
+  color: var(--mainPurple) !important;
 }
 .fa-shopping-cart {
   font-size: 4.5em;
@@ -120,6 +119,33 @@ a, .titl {
   width:100%
 }
 
-.dropdown:hover {
+
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  width: max-content;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.3);
+  z-index: 1;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1;}
+
+.dropdown:hover .dropdown-content {
   display: block;
+  position: absolute;
+  left: 180px;
+  top: -0.35rem;
+}
+.dropdown-item {
+  color: #6d6d6d !important;
+}
+.dropdown-item:hover {
+  font-weight: bold;
+  color: var(--mainDark) !important
 }
