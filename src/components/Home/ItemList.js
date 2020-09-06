@@ -55,7 +55,7 @@ export default function ItemList({ value }) {
       id: 9, 
       icon:'fas fa-gamepad',
       name: "gaming",
-      subcategories: ['Playstations, Nintendoes, XBOX, Accessories'] 
+      subcategories: ['Playstations', 'Nintendoes', 'XBOX', 'Accessories'] 
     },
     { 
       id: 10, 
