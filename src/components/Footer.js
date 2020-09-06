@@ -15,7 +15,7 @@ class Footer extends Component {
                 </p>
               </div>
               <div className="col-md-2 col-sm-6">
-                <h2>Company</h2>
+                <h5>Company</h5>
                 <ul className="links">
                   <li>
                     <a href="https://lollykrown.xyz">Blog</a>
@@ -32,7 +32,7 @@ class Footer extends Component {
                 </ul>
               </div>
               <div className="col-md-2 col-sm-6">
-                <h2>Legal</h2>
+                <h5>Legal</h5>
                 <ul className="links">
                   <li>
                     <a href="https://lollykrown.xyz">Terms</a>
@@ -43,7 +43,7 @@ class Footer extends Component {
                 </ul>
               </div>
               <div className="col-md-2 col-sm-6">
-                <h2>Follow Us</h2>
+                <h5>Follow Us</h5>
                 <ul className="links">
                   <li>
                     <a href="https://lollykrown.xyz">Facebook</a>
