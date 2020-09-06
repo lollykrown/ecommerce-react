@@ -23,7 +23,7 @@ class Footer extends Component {
             <h1>hello from footer</h1>
             </div>
           </div>
-          <p className="footnotes mt-4">&copy; 2020 <a href="https://lollykrown.xyz">
+          <p className="footnotes mt-4">&copy; 2020 <a className="white" href="https://lollykrown.xyz">
               Ol&#250;wak&#225;y&#242;d&#233;.</a> All rights reserved.</p>
         </div>
       </div>

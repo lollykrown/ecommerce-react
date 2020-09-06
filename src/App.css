@@ -79,6 +79,9 @@ body {
 .black{
   color: var(--footerBlack) !important;
 }
+.white{
+  color: var(--mainWhite) !important;
+}
 @media (min-width: 992px) {
   .custom-padd {
     padding: 0 10rem !important;
