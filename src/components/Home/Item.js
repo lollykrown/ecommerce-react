@@ -25,6 +25,8 @@ export default function Item({ item }) {
         <span className="ml-3">{item.name} </span>
       </Link>
       <div className="dropdown-content">
+        <p className="drop-title">{item.name}</p>
+        <div className="line"></div>
         <a className="dropdown-item d-none" href="#">
           Action
         </a>
