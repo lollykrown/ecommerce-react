@@ -116,3 +116,7 @@ a, .titl {
   bottom:0;
   width:100%
 }
+
+.dropdown:hover {
+  display: block;
+}
