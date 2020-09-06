@@ -3,7 +3,6 @@ import Title from "../Title";
 
 export default class TextFrame extends Component {
   render() {
-    console.log(this.props);
     return (
       <div className="container custom-bg">
         <Title name="Ol&#250;wak&#225;y&#242;d&#233; – Nigeria’s Largest Online Mall" title="" />

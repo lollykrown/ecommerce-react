@@ -3,7 +3,6 @@ import Title from "../Title";
 
 export default class Frame extends Component {
   render() {
-    console.log(this.props);
     return (
       <div className="container custom-bg">
         <Title name="Recommended for you" title="" see="see more..." />

@@ -4,7 +4,6 @@ import styled from "styled-components";
 class MyCarousel extends Component {
   
   render(){
-    console.log(this.props)
     return ( 
         <CarouselWrapper>
           <div id="carouselExampleCaptions" className="carousel slide" data-ride="carousel">

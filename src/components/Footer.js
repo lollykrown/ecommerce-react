@@ -3,7 +3,6 @@ import Title from "./Title";
 
 class Footer extends Component {
   render() {
-    console.log(this.props);
     return (
       <div className="footer">
         <div className="container">
@@ -15,9 +14,9 @@ class Footer extends Component {
                   a permanent solution to businesses all around the world.
                 </p>
               </div>
-              <div class="col-md-2 col-sm-6">
+              <div className="col-md-2 col-sm-6">
                 <h2>Company</h2>
-                <ul class="links">
+                <ul className="links">
                   <li>
                     <a href="#blog">Blog</a>
                   </li>
@@ -32,9 +31,9 @@ class Footer extends Component {
                   </li>
                 </ul>
               </div>
-              <div class="col-md-2 col-sm-6">
+              <div className="col-md-2 col-sm-6">
                 <h2>Legal</h2>
-                <ul class="links">
+                <ul className="links">
                   <li>
                     <a href="#">Terms</a>
                   </li>
@@ -43,9 +42,9 @@ class Footer extends Component {
                   </li>
                 </ul>
               </div>
-              <div class="col-md-2 col-sm-6">
+              <div className="col-md-2 col-sm-6">
                 <h2>Follow Us</h2>
-                <ul class="links">
+                <ul className="links">
                   <li>
                     <a href="#">Facebook</a>
                   </li>

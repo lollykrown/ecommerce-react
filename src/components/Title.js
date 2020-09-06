@@ -9,7 +9,7 @@ export default function Title({name, title, see}){
                 <h4 className="text-capitalize text col-9 pl-0 mt-2 ">
                     {name} <strong className="text-blue">{title}</strong>
                 </h4>
-                <Link className="col-3 mt-3 sp">
+                <Link to="/products" className="col-3 mt-3 sp">
                     <span className="sp">{see}</span>
                 </Link>
             </div>
