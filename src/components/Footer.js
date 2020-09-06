@@ -35,10 +35,10 @@ class Footer extends Component {
                 <h2>Legal</h2>
                 <ul className="links">
                   <li>
-                    <a href="#">Terms</a>
+                    <a href="https://lollykrown.xyz">Terms</a>
                   </li>
                   <li>
-                    <a href="#">Privacy policy</a>
+                    <a href="https://lollykrown.xyz">Privacy policy</a>
                   </li>
                 </ul>
               </div>
