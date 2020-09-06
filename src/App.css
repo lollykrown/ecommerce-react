@@ -159,7 +159,7 @@ a, .titl {
 }
 .line{
   width: 100%;
-  height:0.125rem;
+  height:0.075rem;
   background-color: var(--mainGrey);
 }
 /* End of dropdown section */
