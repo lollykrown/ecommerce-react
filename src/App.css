@@ -124,11 +124,10 @@ a, .titl {
 }
 
 
-
+/* dropdown section */
 .dropdown {
   position: relative;
 }
-
 .dropdown-content {
   display: none;
   position: absolute;
@@ -138,9 +137,7 @@ a, .titl {
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.3);
   z-index: 1;
 }
-
 .dropdown-content a:hover {background-color: #f1f1f1;}
-
 .dropdown:hover .dropdown-content {
   display: block;
   position: absolute;
@@ -165,8 +162,9 @@ a, .titl {
   height:0.125rem;
   background-color: var(--mainGrey);
 }
+/* End of dropdown section */
 
-
+/* Footer links */
 .links {
   list-style-type: none;
   padding-inline-start: 0 !important;
