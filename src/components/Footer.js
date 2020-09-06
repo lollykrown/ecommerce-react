@@ -18,16 +18,16 @@ class Footer extends Component {
                 <h2>Company</h2>
                 <ul className="links">
                   <li>
-                    <a href="#blog">Blog</a>
+                    <a href="https://lollykrown.xyz">Blog</a>
                   </li>
                   <li>
-                    <a href="#about">About us</a>
+                    <a href="https://lollykrown.xyz">About us</a>
                   </li>
                   <li>
-                    <a href="#contact">Contact Us</a>
+                    <a href="https://lollykrown.xyz">Contact Us</a>
                   </li>
                   <li>
-                    <a href="#services">Services</a>
+                    <a href="https://lollykrown.xyz">Services</a>
                   </li>
                 </ul>
               </div>
@@ -46,16 +46,16 @@ class Footer extends Component {
                 <h2>Follow Us</h2>
                 <ul className="links">
                   <li>
-                    <a href="#">Facebook</a>
+                    <a href="https://lollykrown.xyz">Facebook</a>
                   </li>
                   <li>
-                    <a href="#">Instagram</a>
+                    <a href="https://lollykrown.xyz">Instagram</a>
                   </li>
                   <li>
-                    <a href="#">Twitter</a>
+                    <a href="https://twitter.com/lollykrown">Twitter</a>
                   </li>
                   <li>
-                    <a href="#">LinkedIn</a>
+                    <a href="https://twitter.com/linkedin">LinkedIn</a>
                   </li>
                 </ul>
               </div>
