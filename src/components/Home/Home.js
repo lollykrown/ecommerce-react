@@ -19,21 +19,16 @@ export default class Home extends Component {
               <div className="col-lg-2 custom-bg">
                 <ItemList />
               </div>
-              <div className="col-lg-2 custom-bg order-sm-3 order-lg-3">
+              <div className="col-sm-4 col-lg-2 custom-bg order-sm-3 order-lg-3">
                 <div className="card my-2">
-                  <div className="card-body">
-                    This is some text within a card body.
-                  </div>
-                </div>
-                <div className="card my-2 blue-bg">
-                  <div className="card-body">
-                    This is some text within a card body.
-                  </div>
+                  <img className="card-image img-fluid" src="img/ani1.gif" height="130" alt="gif1" />
                 </div>
                 <div className="card my-2">
-                  <div className="card-body">
-                    This is some text within a card body.
-                  </div>
+                <img className="card-image img-fluid" src="img/ani3.gif" height="120" alt="gif1" />
+                </div>
+                <div className="card my-2">
+                <img className="card-image img-fluid" src="img/ani2.gif" height="130" alt="gif1" />
+
                 </div>
               </div>
             </div>
