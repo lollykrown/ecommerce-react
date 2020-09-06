@@ -16,10 +16,8 @@ export default function Item({ item }) {
       <div className="dropdown-content">
         <p className="drop-title">{item.name}</p>
         <div className="line"></div>
-        {subcategory.map((item) => {
-           console.log('item',item)
-
-            return <ItemSublist key={item.index} subcategory={item} />
+        {subcategory.map((item, index) => {
+            return <ItemSublist key={index} subcategory={item} />
         })}
       </div>
     </div>
