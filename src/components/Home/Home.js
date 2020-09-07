@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-// import { ProductConsumer } from "../../context";
+import { ProductConsumer } from "../../context";
 import MyCarousel from "./MyCarousel";
 import ItemList from "./ItemList";
 import Frame from "./Frame";
@@ -10,7 +10,6 @@ export default class Home extends Component {
   render() {
     return (
       <section className="container-fluid my-3 custom-padd">
-        {/* <ProductConsumer> */}
         <div className="">
           <div className="container">
             <div className="row">
@@ -66,27 +65,18 @@ export default class Home extends Component {
             </div>
           </div>
         </div>
-        <Frame className="mx-xs-0 mx-lg-4 px-lg-4" />
-        <Frame className="mx-xs-0 mx-lg-4 px-lg-4" />
-        <Frame className="mx-xs-0 mx-lg-4 px-lg-4" />
+        <ProductConsumer>
+          {(value) => {
+              const { accessories, kids, beauty } = value;
+              <React.Fragment>
+                <Frame elem={accessories} className="mx-xs-0 mx-lg-4 px-lg-4" />
+                <Frame className="mx-xs-0 mx-lg-4 px-lg-4" />
+                <Frame className="mx-xs-0 mx-lg-4 px-lg-4" />
+              </React.Fragment>
+            }}
+         </ProductConsumer>
         <TextFrame className="mx-xs-0 mx-lg-4 px-lg-4" />
 
-        {/* {(value) => {
-            const { cart } = value;
-            if (cart.length > 0) {
-              return (
-                <React.Fragment>
-                  <Title name="your" title="cart" />
-                  <CartColumns />
-                  <CartList value={value} />
-                  <CartTotal value={value} history={this.props.history} />
-                </React.Fragment>
-              );
-            } else {
-              return <EmptyCart />;
-            }
-          }} */}
-        {/* </ProductConsumer> */}
       </section>
     );
   }
