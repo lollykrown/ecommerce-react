@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
 import { Switch, Route } from 'react-router-dom'
 import './App.css';
-// import 'bootstrap/dist/js/popper.min.js';
 import 'popper.js/dist/umd/popper.min.js';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'jquery/dist/jquery.min.js';
 import 'bootstrap/dist/js/bootstrap.min.js';
 import Navbar from './components/Navbar';
 import ProductList from './components/ProductList';
+import AccessoriesList from './components/AccessoriesList';
+import KidsList from './components/KidsList';
 import Details from './components/Details';
 import Cart from './components/Cart';
 import Default from './components/Default';
@@ -24,7 +25,9 @@ class App extends Component {
         <Navbar/>
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route exact path="/products" component={ProductList} />
+          <Route exact path="/phones \& tablets" component={ProductList} />
+          <Route exact path="/fashion" component={AccessoriesList} />
+          <Route exact path="/kids" component={KidsList} />
           <Route path="/details" component={Details} />
           <Route path="/cart" component={Cart} />
           <Route component={Default} />

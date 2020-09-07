@@ -1,17 +1,21 @@
 import React, { Component } from 'react';
-import Product from './Product';
+import Kid from './Kid';
 import Title from './Title';
 import { phones } from '../data/data'
+import {accessoriesProducts} from '../data/accessories';
+import {kidsProducts} from '../data/kids';
+
 import { ProductConsumer } from '../context'
 
 
-class ProductList extends Component {
+class KidsList extends Component {
   state = {
-    products: phones
+    products: phones,
+    accessories: accessoriesProducts,
+    kids: kidsProducts
   };
   render(){
 
-    console.log(this.state.products)
     return (
         <React.Fragment>
           <div className="py-5">
@@ -21,9 +25,9 @@ class ProductList extends Component {
               <div className="row">
                 <ProductConsumer>
                   {value => {
-                    return value.products.map(product => {
-                      return <Product key={product.id}
-                      product={product}/>
+                    return value.kids.map(kid => {
+                      return <Kid key={kid.id}
+                      kid={kid}/>
                     })
                   }}
                 </ProductConsumer>
@@ -36,4 +40,4 @@ class ProductList extends Component {
   }
 }
 
-export default ProductList;
+export default KidsList;

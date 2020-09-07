@@ -1,4 +1,4 @@
-export const storeProducts = [
+export const phones = [
   {
     id: 1,
     title: "Google Pixel - Black",

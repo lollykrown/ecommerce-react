@@ -1,7 +1,7 @@
 import React from "react";
 import ItemSublist from "./ItemSublist";
 
-export default function Item({ item }) {
+export default function Item({ item, name }) {
  const subcategory = item.subcategories;
 
   return (
@@ -15,7 +15,7 @@ export default function Item({ item }) {
         <p className="drop-title">{item.name}</p>
         <div className="line"></div>
         {subcategory.map((item, index) => {
-            return <ItemSublist key={index} subcategory={item} />
+            return <ItemSublist key={index} name={name} subcategory={item} />
         })}
       </div>
     </div>

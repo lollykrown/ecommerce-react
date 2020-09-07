@@ -1,11 +1,16 @@
 import React, { Component } from "react";
-import { storeProducts, detailProduct } from "./data";
+import { phones, detailProduct } from "./data/data";
+import {accessoriesProducts} from "./data/accessories";
+import {kidsProducts} from "./data/kids";
+
 
 const ProductContext = React.createContext();
 
 class ProductProvider extends Component {
   state = {
     products: [],
+    accessories:[],
+    kids:[],
     detailProduct,
     cart: [],
     totalItems:0,
@@ -20,12 +25,28 @@ class ProductProvider extends Component {
   }
   setProducts = () => {
     let tempProducts = [];
-    storeProducts.forEach((item) => {
+    let tempAccessories = [];
+    let tempKids = [];
+
+
+    phones.forEach((item) => {
       const singleItem = { ...item };
       tempProducts = [...tempProducts, singleItem];
     });
+    accessoriesProducts.forEach((item) => {
+      const singleItem = { ...item };
+      tempAccessories = [...tempAccessories, singleItem];
+    });
+    kidsProducts.forEach((item) => {
+      const singleItem = { ...item };
+      tempKids = [...tempKids, singleItem];
+    });
     this.setState(() => {
-      return { products: tempProducts };
+      return { 
+        products: tempProducts, 
+        accessories: tempAccessories,
+        kids: tempKids
+       };
     });
   };
 
