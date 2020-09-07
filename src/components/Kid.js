@@ -7,6 +7,7 @@ import PropTypes from "prop-types";
 class Kid extends Component {
   render() {
     const { id, name, imgUrls, price, inCart } = this.props.kid;
+    console.log(this.props.kid)
     return (
       <ProductWrapper className="col-9 mx-auto col-md col-lg-3 my-3">
         <div className="card">
@@ -15,7 +16,7 @@ class Kid extends Component {
               <div className="img-container p-5" 
               onClick={()=>value.handleDetail(id)}>
                 <Link to="/details">
-                  <img src={imgUrls[0] || imgUrls[1] || imgUrls[3]} alt="product" className="card-img-top" />
+                  <img src={imgUrls[0] || imgUrls[1] || imgUrls[3] || imgUrls[4]} alt="product" className="card-img-top" />
                 </Link>
                 <button
                   className="cart-btn"
@@ -50,7 +51,7 @@ class Kid extends Component {
 }
 
 Kid.propTypes = {
-  product: PropTypes.shape({
+  kid: PropTypes.shape({
     id: PropTypes.number,
     img: PropTypes.string,
     title: PropTypes.string,

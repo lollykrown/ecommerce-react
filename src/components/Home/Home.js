@@ -1,12 +1,21 @@
 import React, { Component } from "react";
-import { ProductConsumer } from "../../context";
+// import { ProductConsumer } from "../../context";
 import MyCarousel from "./MyCarousel";
 import ItemList from "./ItemList";
 import Frame from "./Frame";
 import TextFrame from "./TextFrame";
 import { Link } from "react-router-dom";
 
+// import {accessoriesProducts} from '../../data/accessories';
+// import {kidsProducts} from '../../data/kids';
+// import {beautyProducts} from '../../data/beauty';
+
 export default class Home extends Component {
+  // state = {
+  //   accessories: accessoriesProducts,
+  //   kids: kidsProducts,
+  //   beauty: beautyProducts
+  // };
   render() {
     return (
       <section className="container-fluid my-3 custom-padd">
@@ -65,16 +74,25 @@ export default class Home extends Component {
             </div>
           </div>
         </div>
-        <ProductConsumer>
+    
+        <Frame elem="test" className="mx-xs-0 mx-lg-4 px-lg-4" />
+        <Frame elem='' className="mx-xs-0 mx-lg-4 px-lg-4" />
+        <Frame elem='' className="mx-xs-0 mx-lg-4 px-lg-4" />
+        {/* <ProductConsumer>
+        {value => {
+                    return value.kids.map(el => {
+                      return <Frame key={el.id} elem={[el]} className="mx-xs-0 mx-lg-4 px-lg-4" />
+                    })
+                  }}
           {(value) => {
-              const { accessories, kids, beauty } = value;
-              <React.Fragment>
-                <Frame elem={accessories} className="mx-xs-0 mx-lg-4 px-lg-4" />
-                <Frame className="mx-xs-0 mx-lg-4 px-lg-4" />
-                <Frame className="mx-xs-0 mx-lg-4 px-lg-4" />
+              const { kids, beauty } = value;
+              if (kids && beauty){
+              return (<React.Fragment>
+
               </React.Fragment>
-            }}
-         </ProductConsumer>
+              )}
+          }}
+         </ProductConsumer> */}
         <TextFrame className="mx-xs-0 mx-lg-4 px-lg-4" />
 
       </section>

@@ -1,8 +1,10 @@
 export const phones = [
   {
+    category: 'phones',
+    subcategory : 'mobile phones',
     id: 1,
-    title: "Google Pixel - Black",
-    img: "img/product-1.png",
+    name: "Google Pixel - Black",
+    imgUrls: ["img/product-1.png"],
     price: 10000,
     company: "GOOGLE",
     info:
@@ -12,9 +14,11 @@ export const phones = [
     total: 0
   },
   {
+    category: 'phones',
+    subcategory : 'mobile phones',
     id: 2,
-    title: "Samsung S7",
-    img: "img/product-2.png",
+    name: "Samsung S7",
+    imgUrls: ["img/product-2.png"],
     price: 16000,
     company: "SAMSUNG",
     info:
@@ -24,9 +28,11 @@ export const phones = [
     total: 0
   },
   {
+    category: 'phones',
+    subcategory : 'mobile phones',
     id: 3,
     title: "HTC 10 - Black",
-    img: "img/product-3.png",
+    imgUrls: ["img/product-3.png"],
     price: 80000,
     company: "htc",
     info:
@@ -36,9 +42,11 @@ export const phones = [
     total: 0
   },
   {
+    category: 'phones',
+    subcategory : 'mobile phones',
     id: 4,
     title: "HTC 10 - White",
-    img: "img/product-4.png",
+    imgUrls: ["img/product-4.png"],
     price: 18000,
     company: "htc",
     info:
@@ -48,9 +56,11 @@ export const phones = [
     total: 0
   },
   {
+    category: 'phones',
+    subcategory : 'mobile phones',
     id: 5,
     title: "HTC Desire 626s",
-    img: "img/product-5.png",
+    imgUrls: ["img/product-5.png"],
     price: 24000,
     company: "htc",
     info:
@@ -60,9 +70,11 @@ export const phones = [
     total: 0
   },
   {
+    category: 'phones',
+    subcategory : 'mobile phones',
     id: 6,
     title: "Vintage Iphone",
-    img: "img/product-6.png",
+    imgUrls: ["img/product-6.png"],
     price: 17000,
     company: "apple",
     info:
@@ -72,9 +84,11 @@ export const phones = [
     total: 0
   },
   {
+    category: 'phones',
+    subcategory : 'mobile phones',
     id: 7,
     title: "Iphone 7",
-    img: "img/product-7.png",
+    imgUrls: ["img/product-7.png"],
     price: 30000,
     company: "apple",
     info:
@@ -84,9 +98,11 @@ export const phones = [
     total: 0
   },
   {
+    category: 'phones',
+    subcategory : 'mobile phones',
     id: 8,
     title: "Smashed Iphone",
-    img: "img/product-8.png",
+    imgUrls: ["img/product-8.png"],
     price: 16000,
     company: "apple",
     info:
@@ -96,9 +112,11 @@ export const phones = [
     total: 0
   },
   {
+    category: 'phones',
+    subcategory : 'mobile phones',
     id: 9,
     title: "Iphone X",
-    img: "img/iphoneX.png",
+    imgUrls: ["img/iphoneX.png"],
     price: 86000,
     company: "apple",
     info:
@@ -108,9 +126,11 @@ export const phones = [
     total: 0
   },
   {
+    category: 'phones',
+    subcategory : 'mobile phones',
     id: 10,
     title: "Iphone 11",
-    img: "img/iphone11.png",
+    imgUrls: ["img/iphone11.png"],
     price: 95000,
     company: "apple",
     info:
@@ -120,9 +140,11 @@ export const phones = [
     total: 0
   },
   {
+    category: 'phones',
+    subcategory : 'mobile phones',
     id: 11,
     title: "Iphone 12",
-    img: "img/iphone12.png",
+    imgUrls: ["img/iphone12.png"],
     price: 45000,
     company: "apple",
     info:
@@ -132,9 +154,11 @@ export const phones = [
     total: 0
   },
   {
+    category: 'phones',
+    subcategory : 'mobile phones',
     id: 12,
     title: "Samsung S20 Ultra",
-    img: "img/samsung-s20.png",
+    imgUrls: ["img/samsung-s20.png"],
     price: 50000,
     company: "apple",
     info:
@@ -146,9 +170,11 @@ export const phones = [
 ];
 
 export const detailProduct = {
+  category: 'phones',
+  subcategory : 'mobile phones',
   id: 1,
   title: "Google Pixel - Black",
-  img: "img/product-1.png",
+  imgUrls: ["img/product-1.png"],
   price: 10,
   company: "google",
   info:

@@ -4,8 +4,6 @@ import {accessoriesProducts} from "./data/accessories";
 import {kidsProducts} from "./data/kids";
 import {beautyProducts} from "./data/beauty";
 
-
-
 const ProductContext = React.createContext();
 
 class ProductProvider extends Component {
@@ -60,7 +58,11 @@ class ProductProvider extends Component {
   };
 
   getItem = (id) => {
-    const product = this.state.products.find((item) => item.id === id);
+    let product;
+    // if (category === 'kids'){
+    // product = this.state.kids.find((item) => item.id === id);
+    // }
+    product = this.state.products.find((item) => item.id === id);
     return product;
   };
 
@@ -71,9 +73,9 @@ class ProductProvider extends Component {
     });
   };
 
-  addToCart = (id) => {
+  addToCart = (category, id) => {
     let tempProducts = [...this.state.products];
-    const index = tempProducts.indexOf(this.getItem(id));
+    const index = tempProducts.indexOf(this.getItem(category, id));
     const product = tempProducts[index];
     product.inCart = true;
     product.count = 1;
@@ -81,7 +83,7 @@ class ProductProvider extends Component {
     product.total = price;
     this.setState(
       () => {
-        return { products: tempProducts, cart: [...this.state.cart, product] };
+        return { category: tempProducts, cart: [...this.state.cart, product] };
       },
       () => {
         this.addTotals();
@@ -108,8 +110,7 @@ class ProductProvider extends Component {
     const index = tempCart.indexOf(selectedProduct);
     const product = tempCart[index];
     product.count += 1;
-    product.total = product.count * product.price
-    
+    product.total = product.count * product.price   
 
     this.setState(()=> {
       return {

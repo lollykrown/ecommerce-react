@@ -15,7 +15,7 @@ class Accessories extends Component {
               <div className="img-container p-5" 
               onClick={()=>value.handleDetail(id)}>
                 <Link to="/details">
-                  <img src={imgUrls[0] || imgUrls[1] || imgUrls[3]} alt="product" className="card-img-top" />
+                  <img src={imgUrls[0] || imgUrls[1] || imgUrls[3] || imgUrls[4]} alt="product" className="card-img-top" />
                 </Link>
                 <button
                   className="cart-btn"

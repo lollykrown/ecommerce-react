@@ -6,14 +6,14 @@ import PropTypes from "prop-types";
 
 class Beauty extends Component {
   render() {
-    const { id, name, imgUrls, price, inCart } = this.props.b;
+    const { id, name, imgUrls, price, inCart, category } = this.props.b;
     return (
       <ProductWrapper className="col-9 mx-auto col-md col-lg-3 my-3">
         <div className="card">
           <ProductConsumer>
             {value => (
               <div className="img-container p-5" 
-              onClick={()=>value.handleDetail(id)}>
+              onClick={()=>value.handleDetail(category, id)}>
                 <Link to="/details">
                   <img src={imgUrls[0] || imgUrls[1] || imgUrls[3] || imgUrls[4]} alt="product" className="card-img-top" />
                 </Link>
@@ -50,7 +50,7 @@ class Beauty extends Component {
 }
 
 Beauty.propTypes = {
-  product: PropTypes.shape({
+  beauty: PropTypes.shape({
     id: PropTypes.number,
     img: PropTypes.string,
     title: PropTypes.string,

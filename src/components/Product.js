@@ -6,7 +6,7 @@ import PropTypes from "prop-types";
 
 class Product extends Component {
   render() {
-    const { id, title, img, price, inCart } = this.props.product;
+    const { id, name, imgUrls, price, inCart } = this.props.product;
     return (
       <ProductWrapper className="col-9 mx-auto col-md col-lg-3 my-3">
         <div className="card">
@@ -15,7 +15,7 @@ class Product extends Component {
               <div className="img-container p-5" 
               onClick={()=>value.handleDetail(id)}>
                 <Link to="/details">
-                  <img src={img} alt="product" className="card-img-top" />
+                  <img src={imgUrls[0]} alt="product" className="card-img-top" />
                 </Link>
                 <button
                   className="cart-btn"
@@ -37,7 +37,7 @@ class Product extends Component {
             )}
           </ProductConsumer>
           <div className="card-footer d-flex justify-content-between">
-            <p className="align-self-center mb-0">{title}</p>
+            <p className="align-self-center mb-0">{name}</p>
             <h5 className="text-blue font-italic mb-0">
               <span className="mr-1">&#8358;</span>
               {price}
