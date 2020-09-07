@@ -11,7 +11,7 @@ class Default extends Component {
         <ProductConsumer>
             {(value) => {
                 const {modalOpen, closeModal} = value;
-                const { img, title, price } = value.modalProduct;
+                const { imgUrls, name, price } = value.modalProduct;
                 if(!modalOpen){
                     return null
                 } else {
@@ -22,10 +22,10 @@ class Default extends Component {
                                 <div id="modal" className="col-8 mx-auto col-md-6 col-lg-4
                                 text-center text-capitalize p-5">
                                     <h5>Item added to cart</h5>
-                                    <img className="img-fluid" src={img} alt="product" />
-                                    <h5>{title}</h5>
+                                    <img className="img-fluid" src={imgUrls[0]} alt="product" />
+                                    <h5>{name}</h5>
                                     <h5 className="text-muted">price: ${price}</h5>
-                                    <Link to='/products'>
+                                    <Link to='/'>
                                         <ButtonContainer onClick={()=> closeModal()}>
                                             continue shopping
                                         </ButtonContainer>
