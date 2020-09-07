@@ -9,6 +9,7 @@ import Navbar from './components/Navbar';
 import ProductList from './components/ProductList';
 import AccessoriesList from './components/AccessoriesList';
 import KidsList from './components/KidsList';
+import BeautyList from './components/BeautyList';
 import Details from './components/Details';
 import Cart from './components/Cart';
 import Default from './components/Default';
@@ -28,6 +29,7 @@ class App extends Component {
           <Route exact path="/phones \& tablets" component={ProductList} />
           <Route exact path="/fashion" component={AccessoriesList} />
           <Route exact path="/kids" component={KidsList} />
+          <Route exact path="/health \& beauty" component={BeautyList} />
           <Route path="/details" component={Details} />
           <Route path="/cart" component={Cart} />
           <Route component={Default} />

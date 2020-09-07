@@ -1,22 +1,25 @@
 import React, { Component } from 'react';
-import Kid from './Kid';
+import Beauty from './Beauty';
 import Title from './Title';
 import { phones } from '../data/data'
 import {accessoriesProducts} from '../data/accessories';
 import {kidsProducts} from '../data/kids';
+import {beautyProducts} from '../data/beauty';
 
 import { ProductConsumer } from '../context'
 
 
-class KidsList extends Component {
+class BeautyList extends Component {
   state = {
     products: phones,
     accessories: accessoriesProducts,
-    kids: kidsProducts
+    kids: kidsProducts,
+    beauty: beautyProducts
   };
   render(){
 
-    const na = this.state.kids[0].category;
+    const na = this.state.beauty[0].category;
+    console.log(this.state.beauty[0]);
 
     return (
         <React.Fragment>
@@ -27,9 +30,9 @@ class KidsList extends Component {
               <div className="row">
                 <ProductConsumer>
                   {value => {
-                    return value.kids.map(kid => {
-                      return <Kid key={kid.id}
-                      kid={kid}/>
+                    return value.beauty.map(b => {
+                      return <Beauty key={b.id}
+                      b={b}/>
                     })
                   }}
                 </ProductConsumer>
@@ -42,4 +45,4 @@ class KidsList extends Component {
   }
 }
 
-export default KidsList;
+export default BeautyList;

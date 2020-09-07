@@ -15,12 +15,12 @@ class ProductList extends Component {
   };
   render(){
 
-    console.log(this.state.products)
+    const na = this.state.accessories[0].category;
     return (
         <React.Fragment>
           <div className="py-5">
             <div className="container">
-              <Title name="our" title="products" />
+              <Title name={na} title="products" />
 
               <div className="row">
                 <ProductConsumer>
