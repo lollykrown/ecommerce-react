@@ -30,6 +30,8 @@ class App extends Component {
           <Route exact path="/men" component={() => <ProductList cat={"men"} /> } />
           <Route exact path="/women" component={() => <ProductList cat={"women"} /> } />
           <Route exact path="/kids" component={() => <ProductList cat={"kids"} />} />
+          <Route exact path="/shoes" component={() => <ProductList cat={"shoes"} />} />
+          <Route exact path="/household \& items" component={() => <ProductList cat={"house"} />
           <Route path="/details" component={Details} />
           <Route path="/cart" component={Cart} />
           <Route component={Default} />

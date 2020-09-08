@@ -11,7 +11,7 @@ import { menProducts } from '../data/men';
 import { shoeProducts } from '../data/shoes';
 import { womenProducts} from '../data/women';
 import { ProductConsumer } from '../context'
-
+import { houseProducts} from '../data/house';
 
 class ProductList extends Component {
   state = {
@@ -23,7 +23,8 @@ class ProductList extends Component {
     jewelry: jewelryProducts,
     men: menProducts,
     shoes: shoeProducts,
-    women: womenProducts
+    women: womenProducts,
+    house: houseProducts
   };
 
   render(){
@@ -36,8 +37,6 @@ class ProductList extends Component {
       tit = 'Kids'
     } else if(this.props.cat === 'fashion'){
       tit = 'Fashion'
-    // } else if(this.props.cat === 'house'){
-    //   tit = 'Household'
     } else if(this.props.cat === 'jewelry'){
       tit = 'Jewelry'
     } else if(this.props.cat === 'men'){
@@ -46,6 +45,8 @@ class ProductList extends Component {
       tit = 'Shoes'
     } else if(this.props.cat === 'women'){
       tit = 'Women'
+    } else if(this.props.cat === 'house'){
+      tit = 'Household'
     }
 
     return (
@@ -89,6 +90,16 @@ class ProductList extends Component {
                       })
                     } else if (this.props.cat === 'women'){
                       return value.women.map(product => {
+                        return <Product key={product.id}
+                        product={product}/>
+                      })
+                    } else if (this.props.cat === 'shoes'){
+                      return value.shoes.map(product => {
+                        return <Product key={product.id}
+                        product={product}/>
+                      })
+                    } else if (this.props.cat === 'house'){
+                      return value.house.map(product => {
                         return <Product key={product.id}
                         product={product}/>
                       })

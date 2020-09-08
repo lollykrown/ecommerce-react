@@ -80,6 +80,18 @@ export default function ItemList({ value }) {
     },
     {
       id: 7,
+      icon: "fas fa-child",
+      name: "kids",
+      subcategories: ["Diapers", "Toys", "Feeds", "kids"],
+    },
+    {
+      id: 8,
+      icon: "fas fa-shopping-bag",
+      name: "shoes",
+      subcategories: ["Loafers", "mocasin", "sneakers", "ladies' shoes"],
+    },
+    {
+      id: 9,
       icon: "fas fa-shopping-basket",
       name: "supermarket",
       subcategories: [
@@ -90,18 +102,6 @@ export default function ItemList({ value }) {
         "Cereals",
         "Noodles",
       ],
-    },
-    {
-      id: 8,
-      icon: "fas fa-child",
-      name: "kids",
-      subcategories: ["Diapers", "Toys", "Feeds", "kids"],
-    },
-    {
-      id: 9,
-      icon: "fas fa-gamepad",
-      name: "gaming",
-      subcategories: ["Playstations", "Nintendoes", "XBOX", "Accessories"],
     },
     {
       id: 10,
@@ -118,8 +118,8 @@ export default function ItemList({ value }) {
     },
     {
       id: 11,
-      icon: "fas fa-car",
-      name: "automobile",
+      icon: "fas fa-home",
+      name: "household items",
       subcategories: ["Cars", "Accessories"],
     },
     {
