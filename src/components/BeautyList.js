@@ -17,7 +17,6 @@ class BeautyList extends Component {
     beauty: beautyProducts
   };
   render(){
-
     const na = this.state.beauty[0].category;
     console.log(this.state.beauty[0]);
 

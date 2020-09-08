@@ -7,9 +7,6 @@ import 'jquery/dist/jquery.min.js';
 import 'bootstrap/dist/js/bootstrap.min.js';
 import Navbar from './components/Navbar';
 import ProductList from './components/ProductList';
-import AccessoriesList from './components/AccessoriesList';
-import KidsList from './components/KidsList';
-import BeautyList from './components/BeautyList';
 import Details from './components/Details';
 import Cart from './components/Cart';
 import Default from './components/Default';
@@ -26,10 +23,10 @@ class App extends Component {
         <Navbar/>
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route exact path="/phones \& tablets" component={ProductList} />
-          <Route exact path="/fashion" component={AccessoriesList} />
-          <Route exact path="/kids" component={KidsList} />
-          <Route exact path="/health \& beauty" component={BeautyList} />
+          <Route exact path="/phones \& tablets" component={() => <ProductList cat={"phones"} /> } />
+          <Route exact path="/fashion" component={() => <ProductList cat={"accessories"} />} />
+          <Route exact path="/kids" component={() => <ProductList cat={"kids"} />} />
+          <Route exact path="/health \& beauty" component={() => <ProductList cat={"beauty"} />}/>
           <Route path="/details" component={Details} />
           <Route path="/cart" component={Cart} />
           <Route component={Default} />
