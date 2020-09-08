@@ -6,16 +6,16 @@ import Frame from "./Frame";
 import TextFrame from "./TextFrame";
 import { Link } from "react-router-dom";
 
-// import {accessoriesProducts} from '../../data/accessories';
-// import {kidsProducts} from '../../data/kids';
-// import {beautyProducts} from '../../data/beauty';
+import {accessoriesProducts} from '../../data/accessories';
+import {kidsProducts} from '../../data/kids';
+import {beautyProducts} from '../../data/beauty';
 
 export default class Home extends Component {
-  // state = {
-  //   accessories: accessoriesProducts,
-  //   kids: kidsProducts,
-  //   beauty: beautyProducts
-  // };
+  state = {
+    accessories: accessoriesProducts,
+    kids: kidsProducts,
+    beauty: beautyProducts
+  };
   render() {
     return (
       <section className="container-fluid my-3 custom-padd">
@@ -79,16 +79,13 @@ export default class Home extends Component {
         <Frame elem='' className="mx-xs-0 mx-lg-4 px-lg-4" />
         <Frame elem='' className="mx-xs-0 mx-lg-4 px-lg-4" />
         {/* <ProductConsumer>
-        {value => {
-                    return value.kids.map(el => {
-                      return <Frame key={el.id} elem={[el]} className="mx-xs-0 mx-lg-4 px-lg-4" />
-                    })
-                  }}
           {(value) => {
               const { kids, beauty } = value;
-              if (kids && beauty){
-              return (<React.Fragment>
-
+              if (kids !== 'undefined'){
+                // console.log(kids[0].name)
+              return (
+              <React.Fragment>
+                  <Frame elem="elem" className="mx-xs-0 mx-lg-4 px-lg-4" />
               </React.Fragment>
               )}
           }}
