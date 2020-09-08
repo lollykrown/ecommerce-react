@@ -14,7 +14,7 @@ class Product extends Component {
             {value => (
               <div className="img-container p-5" 
               onClick={()=>value.handleDetail(id)}>
-                <Link to="/details">
+                <Link to={{pathname:"/details", state: {from:this.props.location}}}>
                   <img src={imgUrls[0] || imgUrls[1] || imgUrls[3] || imgUrls[4]} alt="product" className="card-img-top" />
                 </Link>
                 <button

@@ -1,9 +1,12 @@
 import React, { Component } from "react";
 import { ProductConsumer } from "../context";
-import { Link } from "react-router-dom";
 import { ButtonContainer } from "./Button";
 
 class Details extends Component {
+buttonbuttnbutton
+  goBack = () => {
+    this.props.history.goBack()
+  }
   render() {
     return (
       <ProductConsumer>
@@ -45,9 +48,7 @@ class Details extends Component {
                     some info about the product
                   </p>
                   <p className="text-muted lead">{info || url}</p>
-                  <Link to='/'>
-                    <ButtonContainer>Back to products</ButtonContainer>
-                  </Link>
+                  <ButtonContainer onClick={this.goBack}>Back to products</ButtonContainer>
                   <ButtonContainer cart disabled={inCart?true:false}
                   onClick={()=> {
                     value.addToCart(id);
