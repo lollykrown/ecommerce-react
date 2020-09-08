@@ -11,7 +11,6 @@ import { menProducts } from '../data/men';
 import { shoeProducts } from '../data/shoes';
 import { womenProducts} from '../data/women';
 import { ProductConsumer } from '../context'
-import { houseProducts} from '../data/house';
 
 class ProductList extends Component {
   state = {
@@ -19,7 +18,6 @@ class ProductList extends Component {
     accessories: accessoriesProducts,
     kids: kidsProducts,
     beauty: beautyProducts,
-    house: houseProducts,
     jewelry: jewelryProducts,
     men: menProducts,
     shoes: shoeProducts,
