@@ -36,8 +36,8 @@ class ProductList extends Component {
       tit = 'Kids'
     } else if(this.props.cat === 'fashion'){
       tit = 'Fashion'
-    } else if(this.props.cat === 'house'){
-      tit = 'Household'
+    // } else if(this.props.cat === 'house'){
+    //   tit = 'Household'
     } else if(this.props.cat === 'jewelry'){
       tit = 'Jewelry'
     } else if(this.props.cat === 'men'){
@@ -77,11 +77,11 @@ class ProductList extends Component {
                         return <Product key={product.id}
                         product={product}/>
                       })
-                    } else if (this.props.cat === 'house'){
-                      return value.house.map(product => {
-                        return <Product key={product.id}
-                        product={product}/>
-                      })
+                    // } else if (this.props.cat === 'house'){
+                    //   return value.house.map(product => {
+                    //     return <Product key={product.id}
+                    //     product={product}/>
+                    //   })
                     } else if (this.props.cat === 'jewelry'){
                       return value.jewelry.map(product => {
                         return <Product key={product.id}

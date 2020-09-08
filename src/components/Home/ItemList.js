@@ -31,14 +31,12 @@ export default function ItemList({ value }) {
     },
     {
       id: 3,
-      icon: "fas fa-home",
-      name: "home & office",
+      icon: "fas fa-clock",
+      name: "watches",
       subcategories: [
-        "Bath",
-        "Bedding",
-        "Home Decor",
-        "Cutleries",
-        "Microwave",
+        "Wrist watches",
+        "Bracelets",
+        "Necklaces"
       ],
     },
     {

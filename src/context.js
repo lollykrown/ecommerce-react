@@ -1,8 +1,9 @@
 import React, { Component } from "react";
 import { phones, detailProduct } from "./data/data";
-import {accessoriesProducts} from "./data/accessories";
-import {kidsProducts} from "./data/kids";
-import {beautyProducts} from "./data/beauty";
+import { accessoriesProducts } from "./data/accessories";
+import { kidsProducts } from "./data/kids";
+import { beautyProducts } from "./data/beauty";
+import { jewelryProducts } from "./data/jewelry";
 
 const ProductContext = React.createContext();
 
@@ -12,6 +13,7 @@ class ProductProvider extends Component {
     accessories:[],
     kids:[],
     beauty:[],
+    jewelry:[],
     detailProduct,
     cart: [],
     totalItems:0,
@@ -29,6 +31,7 @@ class ProductProvider extends Component {
     let tempAccessories = [];
     let tempKids = [];
     let tempBeauty =[];
+    let tempJewelries = [];
 
 
     phones.forEach((item) => {
@@ -47,12 +50,17 @@ class ProductProvider extends Component {
       const singleItem = { ...item };
       tempBeauty = [...tempBeauty, singleItem];
     });
+    jewelryProducts.forEach((item) => {
+      const singleItem = { ...item };
+      tempJewelries = [...tempJewelries, singleItem];
+    });
     this.setState(() => {
       return { 
         products: tempProducts, 
         accessories: tempAccessories,
         kids: tempKids,
-        beauty: tempBeauty
+        beauty: tempBeauty,
+        jewelry: tempJewelries
        };
     });
   };
