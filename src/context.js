@@ -97,23 +97,35 @@ class ProductProvider extends Component {
     });
   };
 
-  getItem = (id) => {
+  getItem = (category, id) => {
     let product;
-    // if (category === 'kids'){
-    // product = this.state.kids.find((item) => item.id === id);
-    // }
+    if(category) {
+      const cat = this.state[category]
+      product = cat.find((item) => item.id === id);
+      return product;
+    }
     product = this.state.products.find((item) => item.id === id);
     return product;
+    
   };
 
-  handleDetail = (id) => {
-    const product = this.getItem(id);
+  handleDetail = (category, id) => {
+    const product = this.getItem(category, id);
     this.setState(() => {
       return { detailProduct: product };
     });
   };
 
   addToCart = (category, id) => {
+    // const cat = this.state[category]
+    // console.log('nu', category)
+    // let tempProducts = [...this.state['products']];
+    // console.log('temp', tempProducts)
+
+    // const index = tempProducts.indexOf(this.getItem(category, id));
+    // console.log('ind', index)
+    // const product = tempProducts[index];
+
     let tempProducts = [...this.state.products];
     const index = tempProducts.indexOf(this.getItem(category, id));
     const product = tempProducts[index];

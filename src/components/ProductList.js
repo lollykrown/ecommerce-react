@@ -14,7 +14,7 @@ import { ProductConsumer } from '../context'
 
 class ProductList extends Component {
   state = {
-    products: phones,
+    phones: phones,
     accessories: accessoriesProducts,
     kids: kidsProducts,
     beauty: beautyProducts,
@@ -59,7 +59,7 @@ class ProductList extends Component {
                     if(this.props.cat === 'phones'){
                       return value.products.map(product => {
                         return <Product key={product.id}
-                        product={product}/>
+                        product={product} />
                       })
                     } else if (this.props.cat === 'beauty'){
                       return value.beauty.map(product => {
@@ -74,7 +74,7 @@ class ProductList extends Component {
                     } else if (this.props.cat === 'accessories'){
                       return value.accessories.map(product => {
                         return <Product key={product.id}
-                        product={product}/>
+                        product={product} />
                       })
                     } else if (this.props.cat === 'jewelry'){
                       return value.jewelry.map(product => {

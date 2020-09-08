@@ -3,7 +3,6 @@ import { ProductConsumer } from "../context";
 import { ButtonContainer } from "./Button";
 
 class Details extends Component {
-buttonbuttnbutton
   goBack = () => {
     this.props.history.goBack()
   }
@@ -11,8 +10,8 @@ buttonbuttnbutton
     return (
       <ProductConsumer>
         {(value) => {
-          console.log(value)
           const {
+            category,
             company,
             imgUrls,
             info,
@@ -51,8 +50,8 @@ buttonbuttnbutton
                   <ButtonContainer onClick={this.goBack}>Back to products</ButtonContainer>
                   <ButtonContainer cart disabled={inCart?true:false}
                   onClick={()=> {
-                    value.addToCart(id);
-                    value.openModal(id);
+                    value.addToCart(category, id);
+                    value.openModal(category, id);
                   }}>
                     {inCart?'inCart':'add to cart'}
                   </ButtonContainer>

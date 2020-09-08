@@ -25,16 +25,14 @@ class Default extends Component {
                                     <img className="img-fluid" src={imgUrls[0]} alt="product" />
                                     <h5>{name}</h5>
                                     <h5 className="text-muted">price: ${price}</h5>
-                                    <Link to='/'>
-                                        <ButtonContainer onClick={()=> closeModal()}>
-                                            continue shopping
-                                        </ButtonContainer>
-                                    </Link>
                                     <Link to='/cart'>
                                         <ButtonContainer cart onClick={()=> closeModal()}>
                                            goto cart
                                         </ButtonContainer>
                                     </Link>
+                                    <ButtonContainer onClick={()=> closeModal()}>
+                                        close
+                                    </ButtonContainer>
                                 </div>
                             </div>
                         </div>

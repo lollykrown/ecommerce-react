@@ -6,14 +6,14 @@ import PropTypes from "prop-types";
 
 class Product extends Component {
   render() {
-    const { id, name, imgUrls, price, inCart } = this.props.product;
+    const { id, category, name, imgUrls, price, inCart } = this.props.product;
     return (
       <ProductWrapper className="col-9 mx-auto col-md col-lg-3 my-3">
         <div className="card">
           <ProductConsumer>
             {value => (
               <div className="img-container p-5" 
-              onClick={()=>value.handleDetail(id)}>
+              onClick={()=>value.handleDetail(category, id)}>
                 <Link to={{pathname:"/details", state: {from:this.props.location}}}>
                   <img src={imgUrls[0] || imgUrls[1] || imgUrls[3] || imgUrls[4]} alt="product" className="card-img-top" />
                 </Link>
