@@ -17,15 +17,22 @@ class ProductList extends Component {
   };
 
   render(){
-
-    const na = this.state.accessories[0].category;
-    console.log(this.state.accessories[0]);
+    let tit;
+    if(this.props.cat === 'phones'){
+      tit = 'Mobile Phone'
+    } else if(this.props.cat === 'beauty'){
+      tit = 'Beauty'
+    } else if(this.props.cat === 'kids'){
+      tit = 'Kids'
+    } else if(this.props.cat === 'fashion'){
+      tit = 'Fashion'
+    }
 
     return (
         <React.Fragment>
           <div className="py-5">
             <div className="container">
-              <Title name="our" title="products" />
+              <Title name={tit} title="products" />
 
               <div className="row">
                 <ProductConsumer>
@@ -35,7 +42,7 @@ class ProductList extends Component {
                         return <Product key={product.id}
                         product={product}/>
                       })
-                    } else if (this.props.cat === 'fashion'){
+                    } else if (this.props.cat === 'beauty'){
                       return value.beauty.map(product => {
                         return <Product key={product.id}
                         product={product}/>
@@ -45,7 +52,7 @@ class ProductList extends Component {
                         return <Product key={product.id}
                         product={product}/>
                       })
-                    }else if (this.props.cat === 'accessories'){
+                    }else if (this.props.cat === 'fashion'){
                       return value.accessories.map(product => {
                         return <Product key={product.id}
                         product={product}/>

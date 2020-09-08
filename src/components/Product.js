@@ -15,7 +15,7 @@ class Product extends Component {
               <div className="img-container p-5" 
               onClick={()=>value.handleDetail(id)}>
                 <Link to="/details">
-                  <img src={imgUrls[0]} alt="product" className="card-img-top" />
+                  <img src={imgUrls[0] || imgUrls[1] || imgUrls[3] || imgUrls[4]} alt="product" className="card-img-top" />
                 </Link>
                 <button
                   className="cart-btn"
@@ -39,7 +39,7 @@ class Product extends Component {
           <div className="card-footer d-flex justify-content-between">
             <p className="align-self-center mb-0">{name}</p>
             <h5 className="text-blue font-italic mb-0">
-              <span className="mr-1">&#8358;</span>
+              <span className="ml-0">&#8358;</span>
               {price}
             </h5>
           </div>
