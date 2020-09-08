@@ -33,7 +33,7 @@ class ProductList extends Component {
       tit = 'Beauty'
     } else if(this.props.cat === 'kids'){
       tit = 'Kids'
-    } else if(this.props.cat === 'fashion'){
+    } else if(this.props.cat === 'accessories'){
       tit = 'Fashion'
     } else if(this.props.cat === 'jewelry'){
       tit = 'Jewelry'
@@ -71,7 +71,7 @@ class ProductList extends Component {
                         return <Product key={product.id}
                         product={product}/>
                       })
-                    } else if (this.props.cat === 'fashion'){
+                    } else if (this.props.cat === 'accessories'){
                       return value.accessories.map(product => {
                         return <Product key={product.id}
                         product={product}/>
