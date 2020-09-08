@@ -24,7 +24,7 @@ class App extends Component {
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/phones \& tablets" component={() => <ProductList cat={"phones"} /> } />
-          <Route exact path="/fashion" component={() => <ProductList cat={"accessories"} />} />
+          <Route exact path="/fashion" component={() => <ProductList cat={"accefafashionshionssories"} />} />
           <Route exact path="/kids" component={() => <ProductList cat={"kids"} />} />
           <Route exact path="/health \& beauty" component={() => <ProductList cat={"beauty"} />}/>
           <Route path="/details" component={Details} />
