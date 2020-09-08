@@ -6,7 +6,7 @@ export default function ItemList({ value }) {
     {
       id: 1,
       icon: "fas fa-tshirt",
-      name: "fashion",
+      name: "accessories",
       subcategories: [
         "Clothings",
         "Shoes",
@@ -53,27 +53,29 @@ export default function ItemList({ value }) {
     },
     {
       id: 5,
-      icon: "fas fa-laptop",
-      name: "computing",
+      icon: "fas fa-male",
+      name: "men",
       subcategories: [
-        "Desktops",
-        "Laptops",
-        "Printers",
-        "Scanners",
-        "Softwares",
-        "Accessories",
+        "Shirts",
+        "Hoodies",
+        "Pajamas",
+        "Boxers",
+        "Robes",
+        "Joggers",
+        "Trousers"
       ],
     },
     {
       id: 6,
-      icon: "fas fa-tablet",
-      name: "electronics",
+      icon: "fas fa-female",
+      name: "women",
       subcategories: [
-        "Televisions",
-        "Home Theatre",
-        "Generators",
-        "DVDs",
-        "Other Appliances",
+        "Tops",
+        "Gowns",
+        "Jumpsuits",
+        "Blouses",
+        "Hoodies",
+        "Shirts"
       ],
     },
     {

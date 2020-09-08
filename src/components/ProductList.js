@@ -77,13 +77,18 @@ class ProductList extends Component {
                         return <Product key={product.id}
                         product={product}/>
                       })
-                    // } else if (this.props.cat === 'house'){
-                    //   return value.house.map(product => {
-                    //     return <Product key={product.id}
-                    //     product={product}/>
-                    //   })
                     } else if (this.props.cat === 'jewelry'){
                       return value.jewelry.map(product => {
+                        return <Product key={product.id}
+                        product={product}/>
+                      })
+                    } else if (this.props.cat === 'men'){
+                      return value.men.map(product => {
+                        return <Product key={product.id}
+                        product={product}/>
+                      })
+                    } else if (this.props.cat === 'women'){
+                      return value.women.map(product => {
                         return <Product key={product.id}
                         product={product}/>
                       })

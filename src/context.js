@@ -4,6 +4,8 @@ import { accessoriesProducts } from "./data/accessories";
 import { kidsProducts } from "./data/kids";
 import { beautyProducts } from "./data/beauty";
 import { jewelryProducts } from "./data/jewelry";
+import { menProducts } from "./data/men";
+import { womenProducts } from "./data/women";
 
 const ProductContext = React.createContext();
 
@@ -14,6 +16,8 @@ class ProductProvider extends Component {
     kids:[],
     beauty:[],
     jewelry:[],
+    men:[],
+    women:[],
     detailProduct,
     cart: [],
     totalItems:0,
@@ -32,6 +36,8 @@ class ProductProvider extends Component {
     let tempKids = [];
     let tempBeauty =[];
     let tempJewelries = [];
+    let tempMen = [];
+    let tempWomen = [];
 
 
     phones.forEach((item) => {
@@ -54,13 +60,23 @@ class ProductProvider extends Component {
       const singleItem = { ...item };
       tempJewelries = [...tempJewelries, singleItem];
     });
+    menProducts.forEach((item) => {
+      const singleItem = { ...item };
+      tempMen = [...tempMen, singleItem];
+    });
+    womenProducts.forEach((item) => {
+      const singleItem = { ...item };
+      tempWomen = [...tempWomen, singleItem];
+    });
     this.setState(() => {
       return { 
         products: tempProducts, 
         accessories: tempAccessories,
         kids: tempKids,
         beauty: tempBeauty,
-        jewelry: tempJewelries
+        jewelry: tempJewelries,
+        men: tempMen,
+        women: tempWomen
        };
     });
   };

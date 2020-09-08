@@ -23,10 +23,12 @@ class App extends Component {
         <Navbar/>
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route exact path="/fashion" component={() => <ProductList cat={"fashion"} />} />
+          <Route exact path="/accessories" component={() => <ProductList cat={"accessories"} />} />
           <Route exact path="/health \& beauty" component={() => <ProductList cat={"beauty"} />}/>
           <Route exact path="/watches" component={() => <ProductList cat={"jewelry"} />}/>
           <Route exact path="/phones \& tablets" component={() => <ProductList cat={"phones"} /> } />
+          <Route exact path="/men" component={() => <ProductList cat={"men"} /> } />
+          <Route exact path="/women" component={() => <ProductList cat={"women"} /> } />
           <Route exact path="/kids" component={() => <ProductList cat={"kids"} />} />
           <Route path="/details" component={Details} />
           <Route path="/cart" component={Cart} />
