@@ -30,8 +30,8 @@ class Navbar extends Component {
               </Link>
             </li>
             <li className="nav-item ml-4">
-              <Link to="/fashion" className="nav-link">
-                fashion
+              <Link to="/accessories" className="nav-link">
+                accessories
               </Link>
             </li>
             <li className="nav-item ml-2">
