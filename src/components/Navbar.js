@@ -3,6 +3,7 @@ import { ProductConsumer } from "../context";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { ButtonContainer } from "./Button";
+import ItemList from "./Home/ItemList";
 
 class Navbar extends Component {
   render() {
@@ -29,10 +30,13 @@ class Navbar extends Component {
                 Home <span className="sr-only">(current)</span>
               </Link>
             </li>
-            <li className="nav-item ml-4">
-              <Link to="/accessories" className="nav-link">
-                accessories
+            <li class="nav-item dropdown">
+              <Link to="/" className="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                categories
               </Link>
+              {/* <div className="dropdown-menu" aria-labelledby="navbarDropdown">
+                <ItemList />
+              </div> */}
             </li>
             <li className="nav-item ml-2">
               <Link to="/" className="nav-link">

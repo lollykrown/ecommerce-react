@@ -130,7 +130,7 @@ export default function ItemList({ value }) {
     },
   ];
   return (
-    <div className="pl-3 mt-1">
+    <div className="pl-3 ml-1 mt-1">
       {items.map((item) => {
         return <Item key={item.id} item={item} name={item.name}/>;
       })}
