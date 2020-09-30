@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useContext} from "react";
 import { Link } from "react-router-dom";
 
-export default function CartItem({item, value}) {
+import { ProductContext } from "../../context";
+
+export default function CartItem({item}) {
     const { id, name, imgUrls, price, total, count } = item;
-    const { increment, decrement, removeItem, handleDetail } = value
+    const { increment, decrement, removeItem, handleDetail } = useContext(ProductContext)
+
   return (
       <div className="row my-2 text-capitalize text-center">
         <div className="col-10 mx-auto col-lg-2" onClick={()=>handleDetail(id)}>

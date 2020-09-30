@@ -1,5 +1,4 @@
 import React, { useContext } from "react";
-import { ProductConsumer } from "../context";
 import { ButtonContainer } from "./Button";
 
 import { ProductContext } from "../context";
@@ -8,7 +7,7 @@ function Details() {
   const { detailProduct } = useContext(ProductContext);
 
   const {category,company,imgUrls,info,price,name,inCart,url,id,} = detailProduct;
-  
+
   const goBack = () => {
     this.props.history.goBack()
   }

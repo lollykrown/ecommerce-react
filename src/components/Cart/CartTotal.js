@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import {Link} from 'react-router-dom'
 import PayPalButton from './PayPalButton'
+import { ProductContext } from "../../context";
 
-export default function CartTotal({value, history}) {
-  const { cartSubtotal, cartTax, cartTotal, clearCart } = value;
+export default function CartTotal({ history }) {
+  const { cartSubtotal, cartTax, cartTotal, clearCart } = useContext(ProductContext)
+
   return (
     <React.Fragment>
       <div className="container mb-4">

@@ -7,7 +7,7 @@ import { ProductContext } from "../context";
 
 export default function Product(props) {
 
-  const {handleDetail} = useContext(ProductContext)
+  const { handleDetail, addToCart, openModal } = useContext(ProductContext)
 
   const { id, category, name, imgUrls, price, inCart } = props.product;
 
@@ -21,10 +21,10 @@ export default function Product(props) {
                 </Link>
                 <button
                   className="cart-btn"
-                  // disabled={inCart ? true : false}
+                  disabled={inCart ? true : false}
                   onClick={() => {
-                    // value.addToCart(id);
-                    // value.openModal(id);
+                    addToCart(category, id);
+                    openModal(category,id);
                   }}
                 >
                   {inCart ? (

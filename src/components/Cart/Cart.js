@@ -1,17 +1,19 @@
-import React, { Component } from "react";
+import React, { useContext } from "react";
 import CartList from "./CartList";
 import CartColumns from "./CartColumns";
 import EmptyCart from "./EmptyCart";
 import CartTotal from "./CartTotal";
 
-export default class Cart extends Component {
-  render() {
+import { ProductContext } from "../../context";
+
+export default function Cart(props) {
+
+  const { cart } = useContext(ProductContext)
+
     return (
       <section>
-          {(value) => {
-            const { cart } = value;
-            if (cart.length > 0) {
-              return (
+            {cart.length > 0 ?
+              (
                 <React.Fragment>
                   <div className="row mx-5 my-2 pl-3">
                     <h4 className="text-capitalize text col-9 pl-4 mt-2 ">
@@ -20,15 +22,11 @@ export default class Cart extends Component {
                     <span className="sp"></span>
                   </div>
                   <CartColumns />
-                  <CartList value={value} />
-                  <CartTotal value={value} history={this.props.history} />
+                  <CartList cart={cart} />
+                  <CartTotal history={props.history} />
                 </React.Fragment>
-              );
-            } else {
-              return <EmptyCart />;
+              ): <EmptyCart />
             }
-          }}
       </section>
     );
-  }
 }

@@ -20,7 +20,7 @@ export const ProductProvider = (props) => {
   const [totalItems, setTotalItems] = useState(0)
   const [modalOpen, setModalOpen] = useState(false)
   const [modalProduct, setModalProduct] = useState(detailProduct)
-  const [cartSubtotal, setCartSubtotaln] = useState(0)
+  const [cartSubtotal, setCartSubtotal] = useState(0)
   const [cartTax, setCartTax] = useState(0);
   const [cartTotal, setCartTotal] = useState(0)
 
@@ -103,30 +103,41 @@ export const ProductProvider = (props) => {
     setDetailProduct(product);
   };
 
+  
+  const addTotals = () => {
+    let subTotal = 0;
+    let totalItem = 0
+    cart.map(item => (subTotal+= item.total));
+    cart.map(item => (totalItem +=  item.count))
+    const tempTax = subTotal * 0.1;
+    const tax = parseFloat(tempTax.toFixed(2));
+    const total = subTotal + tax;
+
+    setCartSubtotal(subTotal)
+    setCartTax(tax)
+    setCartTotal(total)
+    setTotalItems(totalItem)
+  }
+
   const addToCart = (category, id) => {
-    let tempProducts = [...this.state.products];
-    const index = tempProducts.indexOf(this.getItem(category, id));
+    let tempProducts = state[category];
+    const index = tempProducts.indexOf(getItem(category, id));
     const product = tempProducts[index];
     product.inCart = true;
     product.count = 1;
     const price = product.price;
     product.total = price;
-    this.setState(
-      () => {
-        return { category: tempProducts, cart: [...this.state.cart, product] };
-      },
-      () => {
-        this.addTotals();
-      }
-    );
+    setState(prev => prev[category] = tempProducts)
+    setCart(prev => [...prev, product])
+
+    addTotals();
   };
 
-  const openModal = (id) => {
-    const product = this.getItem(id);
-    this.setState(()=> {
-      return {modalProduct:product, modalOpen: true}
-    })
-  }
+  const openModal = (category, id) => {
+    const product = getItem(category,id);
+
+    setModalProduct(product)
+    setModalOpen(true)  }
 
   const closeModal = () => {
     this.setState(()=> {
@@ -207,23 +218,6 @@ export const ProductProvider = (props) => {
     })
   }
 
-  const addTotals = () => {
-    let subTotal = 0;
-    let totalItems = 0
-    this.state.cart.map(item => (subTotal+= item.total));
-    this.state.cart.map(item => (totalItems +=  item.count))
-    const tempTax = subTotal * 0.1;
-    const tax = parseFloat(tempTax.toFixed(2));
-    const total = subTotal + tax;
-    this.setState(()=> {
-      return {
-        cartSubtotal: subTotal,
-        cartTax: tax,
-        cartTotal:total,
-        totalItems
-      }
-    })
-  }
 
     return (
       <ProductContext.Provider
@@ -232,9 +226,9 @@ export const ProductProvider = (props) => {
           setProducts,
           handleDetail,
           detailProduct,
-          // addToCart,
-          // openModal,
-          // closeModal,
+          addToCart,
+          openModal,
+          closeModal,
           // increment,
           // decrement,
           // removeItem,
