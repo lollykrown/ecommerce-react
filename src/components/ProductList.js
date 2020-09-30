@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { useState, useContext } from 'react';
 import Product from './Product';
 import Title from './Title';
 import { phones } from '../data/data'
@@ -12,7 +12,7 @@ import { shoeProducts } from '../data/shoes';
 import { womenProducts} from '../data/women';
 import { ProductConsumer } from '../context'
 
-class ProductList extends Component {
+export default function ProductList() {
   state = {
     phones: phones,
     accessories: accessoriesProducts,
@@ -25,7 +25,6 @@ class ProductList extends Component {
     house: houseProducts
   };
 
-  render(){
     let tit;
     if(this.props.cat === 'phones'){
       tit = 'Mobile Phone'
@@ -109,8 +108,5 @@ class ProductList extends Component {
 
           </div>
         </React.Fragment>
-    );
-  }
+    )
 }
-
-export default ProductList;
