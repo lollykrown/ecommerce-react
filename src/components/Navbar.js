@@ -1,10 +1,9 @@
-import React, { Component } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { ButtonContainer } from "./Button";
 
-class Navbar extends Component {
-  render() {
+export default function Navbar() {
     return (
       <NavWrapper className="navbar navbar-expand-sm bg-primary navbar-dark px-sm-5">
         <Link to="/">
@@ -28,7 +27,7 @@ class Navbar extends Component {
                 Home <span className="sr-only">(current)</span>
               </Link>
             </li>
-            <li class="nav-item dropdown">
+            <li className="nav-item dropdown">
               <Link to="/" className="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 categories
               </Link>
@@ -89,7 +88,6 @@ class Navbar extends Component {
         </div>
       </NavWrapper>
     );
-  }
 }
 
 const NavWrapper = styled.nav`
@@ -100,4 +98,3 @@ const NavWrapper = styled.nav`
     text-transform: capitalize;
   }
 `;
-export default Navbar;

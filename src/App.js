@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Switch, Route } from 'react-router-dom'
 import './App.css';
 import 'popper.js/dist/umd/popper.min.js';
@@ -19,7 +19,7 @@ function App(){
   
     return (
       <React.Fragment>
-        {/* <Navbar/> */}
+        <Navbar/>
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/accessories" component={() => <ProductList cat={"accessories"} />} />

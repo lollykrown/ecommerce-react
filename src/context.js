@@ -4,15 +4,15 @@ export const ProductContext = createContext();
 
 export const ProductProvider = (props) => {
   const [state, setState] = useState({
-    products: [],
-    accessories:[],
-    kids:[],
-    beauty:[],
-    jewelry:[],
-    men:[],
-    women:[],
-    shoes: [],
-    house: [],
+    products: []
+    // accessories:[],
+    // kids:[],
+    // beauty:[],
+    // jewelry:[],
+    // men:[],
+    // women:[],
+    // shoes: [],
+    // house: [],
   })
 
   const [detailProduct, setDetailProduct] = useState({})
@@ -37,52 +37,54 @@ export const ProductProvider = (props) => {
     let tempShoes = [];
     let tempHouse = [];
 
+    console.log('context', phones)
+
     phones.forEach((item) => {
       const singleItem = { ...item };
       tempProducts = [...tempProducts, singleItem];
     });
-    accessoriesProducts.forEach((item) => {
-      const singleItem = { ...item };
-      tempAccessories = [...tempAccessories, singleItem];
-    });
-    kidsProducts.forEach((item) => {
-      const singleItem = { ...item };
-      tempKids = [...tempKids, singleItem];
-    });
-    beautyProducts.forEach((item) => {
-      const singleItem = { ...item };
-      tempBeauty = [...tempBeauty, singleItem];
-    });
-    jewelryProducts.forEach((item) => {
-      const singleItem = { ...item };
-      tempJewelries = [...tempJewelries, singleItem];
-    });
-    menProducts.forEach((item) => {
-      const singleItem = { ...item };
-      tempMen = [...tempMen, singleItem];
-    });
-    womenProducts.forEach((item) => {
-      const singleItem = { ...item };
-      tempWomen = [...tempWomen, singleItem];
-    });
-    shoeProducts.forEach((item) => {
-      const singleItem = { ...item };
-      tempShoes = [...tempShoes, singleItem];
-    });
-    houseProducts.forEach((item) => {
-      const singleItem = { ...item };
-      tempHouse = [...tempHouse, singleItem];
-    });
+    // accessoriesProducts.forEach((item) => {
+    //   const singleItem = { ...item };
+    //   tempAccessories = [...tempAccessories, singleItem];
+    // });
+    // kidsProducts.forEach((item) => {
+    //   const singleItem = { ...item };
+    //   tempKids = [...tempKids, singleItem];
+    // });
+    // beautyProducts.forEach((item) => {
+    //   const singleItem = { ...item };
+    //   tempBeauty = [...tempBeauty, singleItem];
+    // });
+    // jewelryProducts.forEach((item) => {
+    //   const singleItem = { ...item };
+    //   tempJewelries = [...tempJewelries, singleItem];
+    // });
+    // menProducts.forEach((item) => {
+    //   const singleItem = { ...item };
+    //   tempMen = [...tempMen, singleItem];
+    // });
+    // womenProducts.forEach((item) => {
+    //   const singleItem = { ...item };
+    //   tempWomen = [...tempWomen, singleItem];
+    // });
+    // shoeProducts.forEach((item) => {
+    //   const singleItem = { ...item };
+    //   tempShoes = [...tempShoes, singleItem];
+    // });
+    // houseProducts.forEach((item) => {
+    //   const singleItem = { ...item };
+    //   tempHouse = [...tempHouse, singleItem];
+    // });
     setState({
         products: tempProducts, 
-        accessories: tempAccessories,
-        kids: tempKids,
-        beauty: tempBeauty,
-        jewelry: tempJewelries,
-        men: tempMen,
-        women: tempWomen,
-        shoes: tempShoes,
-        house: tempHouse
+        // accessories: tempAccessories,
+        // kids: tempKids,
+        // beauty: tempBeauty,
+        // jewelry: tempJewelries,
+        // men: tempMen,
+        // women: tempWomen,
+        // shoes: tempShoes,
+        // house: tempHouse
     });
   };
 

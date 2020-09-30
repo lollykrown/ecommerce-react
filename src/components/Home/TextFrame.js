@@ -1,8 +1,7 @@
-import React, { Component } from "react";
+import React from "react";
 import Title from "../Title";
 
-export default class TextFrame extends Component {
-  render() {
+export default function TextFrame() {
     return (
       <div className="container custom-bg">
         <Title name="Ol&#250;wak&#225;y&#242;d&#233; – Nigeria’s Largest Online Mall" title="" />
@@ -31,5 +30,4 @@ export default class TextFrame extends Component {
             </div>
       </div>
     );
-  }
 }

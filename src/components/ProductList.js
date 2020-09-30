@@ -20,18 +20,18 @@ export default function ProductList(props) {
   useEffect(() =>{
     setProducts(
       phones,
-      accessoriesProducts,
-      kidsProducts,
-      beautyProducts,
-      jewelryProducts,
-      menProducts,
-      womenProducts,
-      shoeProducts,
-      houseProducts
+      // accessoriesProducts,
+      // kidsProducts,
+      // beautyProducts,
+      // jewelryProducts,
+      // menProducts,
+      // womenProducts,
+      // shoeProducts,
+      // houseProducts
     );
   },[])
 
-  console.log(state)
+  console.log('pro-list',state)
 
     let tit;
     if(props.cat === 'phones'){

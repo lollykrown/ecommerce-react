@@ -1,8 +1,7 @@
-import React, { Component } from "react";
+import React from "react";
 import Title from "../Title";
 
-export default class Frame extends Component {
-  render() {
+export default function Frame() {
     return (
       <div className="container custom-bg">
         <Title name="Recommended for you" title="" see="see more..." />
@@ -58,5 +57,4 @@ export default class Frame extends Component {
         </div>
       </div>
     );
-  }
 }

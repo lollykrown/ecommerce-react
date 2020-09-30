@@ -1,27 +1,12 @@
-import React, { useContext, useEffect } from "react";
-// import { ProductConsumer } from "../../context";
+import React from "react";
 import MyCarousel from "./MyCarousel";
 import ItemList from "./ItemList";
 import Frame from "./Frame";
 import TextFrame from "./TextFrame";
 import { Link } from "react-router-dom";
 
-import {accessoriesProducts} from '../../data/accessories';
-import {kidsProducts} from '../../data/kids';
-import {beautyProducts} from '../../data/beauty';
-import { ProductContext } from "../../context";
-
 export default function Home() {
-  const { state, setProducts } = useContext(ProductContext)
   
-  // useEffect(() =>{
-    setProducts(
-      accessoriesProducts,
-      kidsProducts,
-      beautyProducts,
-    );
-  // })
-
     return (
       <section className="container-fluid my-3 custom-padd">
         <div className="">

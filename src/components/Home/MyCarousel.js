@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
 import styled from "styled-components";
 
-class MyCarousel extends Component {
-  
-  render(){
-    return ( 
+function MyCarousel() {
+      return ( 
         <CarouselWrapper>
           <div id="carouselExampleCaptions" className="carousel slide" data-ride="carousel">
             <ol className="carousel-indicators">
@@ -63,7 +61,6 @@ class MyCarousel extends Component {
 
         </CarouselWrapper>
     );
-  }
 }
 
 const CarouselWrapper = styled.nav`
