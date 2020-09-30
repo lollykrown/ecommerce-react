@@ -1,19 +1,21 @@
-import React from "react";
+import React, {useContext} from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 
+import { ProductContext } from "../context";
+
 export default function Product(props) {
+
+  const {handleDetail} = useContext(ProductContext)
 
   const { id, category, name, imgUrls, price, inCart } = props.product;
 
     return (
       <ProductWrapper className="col-9 mx-auto col-md col-lg-3 my-3">
         <div className="card">
-            {/* {value => ( */}
               <div className="img-container p-5" 
-              // onClick={()=>value.handleDetail(category, id)}
-              >
+              onClick={()=> handleDetail(category, id)}>
                 <Link to={{pathname:"/details", state: {from:props.location}}}>
                   <img src={imgUrls[0] || imgUrls[1] || imgUrls[3] || imgUrls[4]} alt="product" className="card-img-top" />
                 </Link>

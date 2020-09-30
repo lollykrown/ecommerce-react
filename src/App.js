@@ -31,8 +31,8 @@ function App(){
           <Route exact path="/kids" component={() => <ProductList cat={"kids"} />} />
           <Route exact path="/shoes" component={() => <ProductList cat={"shoes"} />} />
           <Route exact path="/household items" component={() => <ProductList cat={"house"}/>} />
-          {/* <Route path="/details" component={Details} />
-          <Route path="/cart" component={Cart} /> */}
+          <Route path="/details" component={Details} />
+          {/* <Route path="/cart" component={Cart} /> */}
           <Route component={Default} />
         </Switch>
         <Footer />

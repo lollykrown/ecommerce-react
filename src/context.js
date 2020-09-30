@@ -93,16 +93,14 @@ export const ProductProvider = (props) => {
       product = cat.find((item) => item.id === id);
       return product;
     }
-    product = state.products.find((item) => item.id === id);
+    product = state.phones.find((item) => item.id === id);
     return product;
     
   };
 
   const handleDetail = (category, id) => {
-    const product = this.getItem(category, id);
-    this.setState(() => {
-      return { detailProduct: product };
-    });
+    const product = getItem(category, id);
+    setDetailProduct(product);
   };
 
   const addToCart = (category, id) => {
@@ -232,7 +230,8 @@ export const ProductProvider = (props) => {
         value={{
           state,
           setProducts,
-          // handleDetail,
+          handleDetail,
+          detailProduct,
           // addToCart,
           // openModal,
           // closeModal,
