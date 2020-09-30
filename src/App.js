@@ -15,12 +15,11 @@ import Home from './components/Home';
 import Footer from './components/Footer';
 
 
-class App extends Component {
+function App(){
   
-  render(){
     return (
       <React.Fragment>
-        <Navbar/>
+        {/* <Navbar/> */}
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/accessories" component={() => <ProductList cat={"accessories"} />} />
@@ -32,15 +31,14 @@ class App extends Component {
           <Route exact path="/kids" component={() => <ProductList cat={"kids"} />} />
           <Route exact path="/shoes" component={() => <ProductList cat={"shoes"} />} />
           <Route exact path="/household items" component={() => <ProductList cat={"house"}/>} />
-          <Route path="/details" component={Details} />
-          <Route path="/cart" component={Cart} />
-          <Route component={Default} />
+          {/* <Route path="/details" component={Details} />
+          <Route path="/cart" component={Cart} /> */}
+          {/* <Route component={Default} /> */}
         </Switch>
         <Footer />
-        <Modal/>
+        {/* <Modal/> */}
       </React.Fragment>
     );
-  }
 }
 
 export default App;

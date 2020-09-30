@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import Product from './Product';
 import Title from './Title';
 import { phones } from '../data/data'
@@ -10,39 +10,47 @@ import { jewelryProducts } from '../data/jewelry';
 import { menProducts } from '../data/men';
 import { shoeProducts } from '../data/shoes';
 import { womenProducts} from '../data/women';
-import { ProductConsumer } from '../context'
 
-export default function ProductList() {
-  state = {
-    phones: phones,
-    accessories: accessoriesProducts,
-    kids: kidsProducts,
-    beauty: beautyProducts,
-    jewelry: jewelryProducts,
-    men: menProducts,
-    shoes: shoeProducts,
-    women: womenProducts,
-    house: houseProducts
-  };
+import { ProductContext } from "../context";
+
+export default function ProductList(props) {
+
+  const { state, setProducts } = useContext(ProductContext)
+
+  useEffect(() =>{
+    setProducts(
+      phones,
+      accessoriesProducts,
+      kidsProducts,
+      beautyProducts,
+      jewelryProducts,
+      menProducts,
+      womenProducts,
+      shoeProducts,
+      houseProducts
+    );
+  },[])
+
+  console.log(state)
 
     let tit;
-    if(this.props.cat === 'phones'){
+    if(props.cat === 'phones'){
       tit = 'Mobile Phone'
-    } else if(this.props.cat === 'beauty'){
+    } else if(props.cat === 'beauty'){
       tit = 'Beauty'
-    } else if(this.props.cat === 'kids'){
+    } else if(props.cat === 'kids'){
       tit = 'Kids'
-    } else if(this.props.cat === 'accessories'){
+    } else if(props.cat === 'accessories'){
       tit = 'Fashion'
-    } else if(this.props.cat === 'jewelry'){
+    } else if(props.cat === 'jewelry'){
       tit = 'Jewelry'
-    } else if(this.props.cat === 'men'){
+    } else if(props.cat === 'men'){
       tit = 'Men'
-    } else if(this.props.cat === 'shoes'){
+    } else if(props.cat === 'shoes'){
       tit = 'Shoes'
-    } else if(this.props.cat === 'women'){
+    } else if(props.cat === 'women'){
       tit = 'Women'
-    } else if(this.props.cat === 'house'){
+    } else if(props.cat === 'house'){
       tit = 'Household'
     }
 
@@ -53,56 +61,54 @@ export default function ProductList() {
               <Title name={tit} title="products" />
 
               <div className="row">
-                <ProductConsumer>
-                  {value => {
-                    if(this.props.cat === 'phones'){
-                      return value.products.map(product => {
+                  {state => {
+                    if(props.cat === 'phones'){
+                      return state.products.map(product => {
                         return <Product key={product.id}
                         product={product} />
                       })
-                    } else if (this.props.cat === 'beauty'){
-                      return value.beauty.map(product => {
+                    } else if (props.cat === 'beauty'){
+                      return state.beauty.map(product => {
                         return <Product key={product.id}
                         product={product}/>
                       })
-                    } else if (this.props.cat === 'kids'){
-                      return value.kids.map(product => {
+                    } else if (props.cat === 'kids'){
+                      return state.kids.map(product => {
                         return <Product key={product.id}
                         product={product}/>
                       })
-                    } else if (this.props.cat === 'accessories'){
-                      return value.accessories.map(product => {
+                    } else if (props.cat === 'accessories'){
+                      return state.accessories.map(product => {
                         return <Product key={product.id}
                         product={product} />
                       })
-                    } else if (this.props.cat === 'jewelry'){
-                      return value.jewelry.map(product => {
+                    } else if (props.cat === 'jewelry'){
+                      return state.jewelry.map(product => {
                         return <Product key={product.id}
                         product={product}/>
                       })
-                    } else if (this.props.cat === 'men'){
-                      return value.men.map(product => {
+                    } else if (props.cat === 'men'){
+                      return state.men.map(product => {
                         return <Product key={product.id}
                         product={product}/>
                       })
-                    } else if (this.props.cat === 'women'){
-                      return value.women.map(product => {
+                    } else if (props.cat === 'women'){
+                      return state.women.map(product => {
                         return <Product key={product.id}
                         product={product}/>
                       })
-                    } else if (this.props.cat === 'shoes'){
-                      return value.shoes.map(product => {
+                    } else if (props.cat === 'shoes'){
+                      return state.shoes.map(product => {
                         return <Product key={product.id}
                         product={product}/>
                       })
-                    } else if (this.props.cat === 'house'){
-                      return value.house.map(product => {
+                    } else if (props.cat === 'house'){
+                      return state.house.map(product => {
                         return <Product key={product.id}
                         product={product}/>
                       })
                     }
                   }}
-                </ProductConsumer>
               </div>
             </div>
 

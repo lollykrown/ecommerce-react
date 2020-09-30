@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { useContext, useEffect } from "react";
 // import { ProductConsumer } from "../../context";
 import MyCarousel from "./MyCarousel";
 import ItemList from "./ItemList";
@@ -9,14 +9,19 @@ import { Link } from "react-router-dom";
 import {accessoriesProducts} from '../../data/accessories';
 import {kidsProducts} from '../../data/kids';
 import {beautyProducts} from '../../data/beauty';
+import { ProductContext } from "../../context";
 
-export default class Home extends Component {
-  state = {
-    accessories: accessoriesProducts,
-    kids: kidsProducts,
-    beauty: beautyProducts
-  };
-  render() {
+export default function Home() {
+  const { state, setProducts } = useContext(ProductContext)
+  
+  // useEffect(() =>{
+    setProducts(
+      accessoriesProducts,
+      kidsProducts,
+      beautyProducts,
+    );
+  // })
+
     return (
       <section className="container-fluid my-3 custom-padd">
         <div className="">
@@ -94,5 +99,4 @@ export default class Home extends Component {
 
       </section>
     );
-  }
 }

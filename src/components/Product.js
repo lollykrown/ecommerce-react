@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import { ProductConsumer } from "../context";
 import PropTypes from "prop-types";
 
 class Product extends Component {
@@ -10,7 +9,7 @@ class Product extends Component {
     return (
       <ProductWrapper className="col-9 mx-auto col-md col-lg-3 my-3">
         <div className="card">
-          <ProductConsumer>
+          {/* <ProductConsumer>
             {value => (
               <div className="img-container p-5" 
               onClick={()=>value.handleDetail(category, id)}>
@@ -35,7 +34,7 @@ class Product extends Component {
                 </button>
               </div>
             )}
-          </ProductConsumer>
+          </ProductConsumer> */}
           <div className="card-footer d-flex justify-content-between">
             <p className="align-self-center d-inline-block text-truncate name mb-0">{name}</p>
             <h5 className="text-blue font-italic mb-0">
