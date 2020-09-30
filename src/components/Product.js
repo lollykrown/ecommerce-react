@@ -1,27 +1,28 @@
-import React, { Component } from "react";
+import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 
-class Product extends Component {
-  render() {
-    const { id, category, name, imgUrls, price, inCart } = this.props.product;
+export default function Product(props) {
+
+  const { id, category, name, imgUrls, price, inCart } = props.product;
+
     return (
       <ProductWrapper className="col-9 mx-auto col-md col-lg-3 my-3">
         <div className="card">
-          {/* <ProductConsumer>
-            {value => (
+            {/* {value => ( */}
               <div className="img-container p-5" 
-              onClick={()=>value.handleDetail(category, id)}>
-                <Link to={{pathname:"/details", state: {from:this.props.location}}}>
+              // onClick={()=>value.handleDetail(category, id)}
+              >
+                <Link to={{pathname:"/details", state: {from:props.location}}}>
                   <img src={imgUrls[0] || imgUrls[1] || imgUrls[3] || imgUrls[4]} alt="product" className="card-img-top" />
                 </Link>
                 <button
                   className="cart-btn"
-                  disabled={inCart ? true : false}
+                  // disabled={inCart ? true : false}
                   onClick={() => {
-                    value.addToCart(id);
-                    value.openModal(id);
+                    // value.addToCart(id);
+                    // value.openModal(id);
                   }}
                 >
                   {inCart ? (
@@ -33,8 +34,7 @@ class Product extends Component {
                   )}
                 </button>
               </div>
-            )}
-          </ProductConsumer> */}
+            {/* )} */}
           <div className="card-footer d-flex justify-content-between">
             <p className="align-self-center d-inline-block text-truncate name mb-0">{name}</p>
             <h5 className="text-blue font-italic mb-0">
@@ -45,7 +45,6 @@ class Product extends Component {
         </div>
       </ProductWrapper>
     );
-  }
 }
 
 Product.propTypes = {
@@ -111,4 +110,3 @@ const ProductWrapper = styled.div`
     max-lines:2 !important;
   }
 `;
-export default Product;

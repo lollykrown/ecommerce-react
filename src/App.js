@@ -33,7 +33,7 @@ function App(){
           <Route exact path="/household items" component={() => <ProductList cat={"house"}/>} />
           {/* <Route path="/details" component={Details} />
           <Route path="/cart" component={Cart} /> */}
-          {/* <Route component={Default} /> */}
+          <Route component={Default} />
         </Switch>
         <Footer />
         {/* <Modal/> */}
