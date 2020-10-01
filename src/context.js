@@ -223,6 +223,7 @@ export const ProductProvider = (props) => {
       <ProductContext.Provider
         value={{
           state,
+          cart,
           totalItems,
           modalOpen,
           modalProduct,

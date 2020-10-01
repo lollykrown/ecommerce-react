@@ -21,7 +21,7 @@ function Details(props) {
 
       <div className="row">
         <div className="col-10 mx-auto col-md-6 my-3">
-          <img src={imgUrls[0]} className="img-fluid" alt="product" />
+          <img src={imgUrls[0]} className="img-fluid" width="300" alt="product" />
         </div>
         <div className="col-10 mx-auto col-md-6 my-3 text-capitalize">
           <h2>model: {company}</h2>
