@@ -128,7 +128,7 @@ export const ProductProvider = (props) => {
     const price = product.price;
     product.total = price;
     setState(prev => prev[category] = tempProducts)
-    setCart(prev => [...prev, product])
+    setCart([...cart, product])
 
     addTotals();
   };
@@ -209,13 +209,7 @@ export const ProductProvider = (props) => {
   }
 
   const clearCart = () => {
-    this.setState(()=> {
-      return {cart:[]}
-    },
-    ()=> {
-      this.setProducts();
-      this.addTotals()
-    })
+    setCart([])
   }
 
 
