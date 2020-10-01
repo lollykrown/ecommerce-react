@@ -3,7 +3,6 @@ import { ProductConsumer } from "../context";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { ButtonContainer } from "./Button";
-import ItemList from "./Home/ItemList";
 
 class Navbar extends Component {
   render() {
