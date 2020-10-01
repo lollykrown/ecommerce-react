@@ -144,6 +144,13 @@ a, .titl {
   left: 180px;
   top: -0.35rem;
 }
+
+.navb:hover .dropdown-content {
+  display: block;
+  position: absolute;
+  left: 180px;
+  top: -0.35rem;
+} 
 .dropdown-item {
   color: var(--mainGrey) !important;
 }
