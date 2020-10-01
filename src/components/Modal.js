@@ -10,8 +10,7 @@ export default function Modal(){
     const { modalProduct, modalOpen, closeModal} = useContext(ProductContext);
     const { imgUrls, name, price } = modalProduct;
   
-    return (
- 
+    return ( 
                     <ModalContainer>
                     { modalOpen && 
                      (  

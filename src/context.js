@@ -224,6 +224,8 @@ export const ProductProvider = (props) => {
         value={{
           state,
           totalItems,
+          modalOpen,
+          modalProduct,
           setProducts,
           handleDetail,
           detailProduct,
