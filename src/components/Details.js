@@ -3,13 +3,13 @@ import { ButtonContainer } from "./Button";
 
 import { ProductContext } from "../context";
 
-function Details() {
-  const { detailProduct } = useContext(ProductContext);
+function Details(props) {
+  const { detailProduct, addToCart, openModal } = useContext(ProductContext);
 
   const {category,company,imgUrls,info,price,name,inCart,url,id,} = detailProduct;
 
   const goBack = () => {
-    this.props.history.goBack()
+    props.history.goBack()
   }
   return (
     <div className="container py-5">
@@ -45,8 +45,8 @@ function Details() {
             cart
             disabled={inCart ? true : false}
             onClick={() => {
-              // value.addToCart(category, id);
-              // value.openModal(category, id);
+              addToCart(category, id);
+              openModal(category, id);
             }}
           >
             {inCart ? "inCart" : "add to cart"}

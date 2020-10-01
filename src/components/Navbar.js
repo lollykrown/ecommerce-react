@@ -1,9 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { ButtonContainer } from "./Button";
 
+import { ProductContext } from "../context";
+
 export default function Navbar() {
+
+  const { totalItems } = useContext(ProductContext);
+
     return (
       <NavWrapper className="navbar navbar-expand-sm bg-primary navbar-dark px-sm-5">
         <Link to="/">
@@ -74,17 +79,15 @@ export default function Navbar() {
               </Link>
             </li>
           </ul>
-            {(value) => (
               <Link to="/cart" className="ml-auto ">
                 <ButtonContainer>
                   <span>
                     <i className="fas fa-cart-plus mr-2"></i>
                   </span>
                   my cart
-                  <span className="btn btn-white ml-2">{value.totalItems}</span>
+                  <span className="btn btn-white ml-2">{totalItems}</span>
                 </ButtonContainer>
               </Link>
-            )}
         </div>
       </NavWrapper>
     );

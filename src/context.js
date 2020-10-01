@@ -223,16 +223,17 @@ export const ProductProvider = (props) => {
       <ProductContext.Provider
         value={{
           state,
+          totalItems,
           setProducts,
           handleDetail,
           detailProduct,
           addToCart,
           openModal,
           closeModal,
-          // increment,
-          // decrement,
-          // removeItem,
-          // clearCart
+          increment,
+          decrement,
+          removeItem,
+          clearCart
         }}
       >
         {props.children}
