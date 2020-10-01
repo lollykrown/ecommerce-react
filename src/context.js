@@ -219,6 +219,9 @@ export const ProductProvider = (props) => {
           state,
           cart,
           totalItems,
+          cartSubtotal,
+          cartTax,
+          cartTotal,
           modalOpen,
           modalProduct,
           setProducts,
@@ -230,7 +233,7 @@ export const ProductProvider = (props) => {
           increment,
           decrement,
           removeItem,
-          clearCart
+          clearCart,
         }}
       >
         {props.children}

@@ -164,7 +164,7 @@ export default function Navbar() {
                 categories
               </Link>
               <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-                {items.map(item => <Link className="dropdown-item text-capitalize" to={`/${item.name}`}>{item.name}</Link>)}
+                {items.map(item => <Link key={item.id} className="dropdown-item text-capitalize" to={`/${item.name}`}>{item.name}</Link>)}
                 <div className="line"></div>
                 <Link className="dropdown-item" to="/">Settings</Link>
               </div>
