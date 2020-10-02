@@ -5,10 +5,10 @@ export default class Frame extends Component {
   render() {
     return (
       <div className="container custom-bg">
-        <Title name="Recommended for you" title="" see="see more..." />
+        <Title name="Recommended for you" link={this.props.products[0].category} title="" see="see more..." />
         <div className="row my-4 ml-1 text-capitalize">
             {this.props.products.map(p => (
-                        <div className="col-10 col-lg-4 pl-0 pr-2 my-card">  
+                        <div key={p.id} className="col-10 col-lg-4 pl-0 pr-2 my-card">  
                         <div className="card mb-3">
                             <div className="row no-gutters">
                                 <div className="col-md-4">
@@ -17,7 +17,7 @@ export default class Frame extends Component {
                                 </div>
                                 <div className="col-md-8">
                                     <div className="card-body">
-                                        <h5 className="card-title">{p.name}</h5>
+                                        <h5 className="card-title name">{p.name}</h5>
                                         <p className="card-text">&#8358; {p.price}</p>
                                         <p className="card-text"><small className="text-muted">Discount</small></p>
                                     </div>

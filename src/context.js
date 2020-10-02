@@ -21,7 +21,7 @@ class ProductProvider extends Component {
     men:[],
     women:[],
     shoes: [],
-    house: [],
+    household: [],
     detailProduct,
     cart: [],
     totalItems:0,
@@ -92,7 +92,7 @@ class ProductProvider extends Component {
         men: tempMen,
         women: tempWomen,
         shoes: tempShoes,
-        house: tempHouse
+        household: tempHouse
        };
     });
   };

@@ -2,14 +2,14 @@ import React from 'react';
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
-export default function Title({name, title, see}){
+export default function Title({name, title, link, see}){
     return (
         <TitleContainer pos className="">
             <div className="row mx-auto my-2 ">
                 <h4 className="text-capitalize text col-9 pl-0 mt-2 ">
                     {name} <strong className="text-blue">{title}</strong>
                 </h4>
-                <Link to="/products" className="col-3 mt-3 sp">
+                <Link to={`/${link}`}className="col-3 mt-3 sp">
                     <span className="sp">{see}</span>
                 </Link>
             </div>

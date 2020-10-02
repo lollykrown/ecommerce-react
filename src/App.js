@@ -24,14 +24,14 @@ class App extends Component {
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/accessories" component={() => <ProductList cat={"accessories"} />} />
-          <Route exact path="/health \& beauty" component={() => <ProductList cat={"beauty"} />}/>
-          <Route exact path="/watches" component={() => <ProductList cat={"jewelry"} />}/>
-          <Route exact path="/phones \& tablets" component={() => <ProductList cat={"phones"} /> } />
+          <Route exact path="/beauty" component={() => <ProductList cat={"beauty"} />}/>
+          <Route exact path="/jewelry" component={() => <ProductList cat={"jewelry"} />}/>
+          <Route exact path="/phones" component={() => <ProductList cat={"phones"} /> } />
           <Route exact path="/men" component={() => <ProductList cat={"men"} /> } />
           <Route exact path="/women" component={() => <ProductList cat={"women"} /> } />
           <Route exact path="/kids" component={() => <ProductList cat={"kids"} />} />
           <Route exact path="/shoes" component={() => <ProductList cat={"shoes"} />} />
-          <Route exact path="/household items" component={() => <ProductList cat={"house"}/>} />
+          <Route exact path="/household" component={() => <ProductList cat={"house"}/>} />
           <Route path="/details" component={Details} />
           <Route path="/cart" component={Cart} />
           <Route component={Default} />

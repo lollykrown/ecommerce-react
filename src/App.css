@@ -31,6 +31,13 @@ body {
   color: var(--lightBlue) !important
 }
 
+.name {
+  max-lines:1 !important;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
 .btn-black {
   background: transparent;
   text-transform: capitalize;
