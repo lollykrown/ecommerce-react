@@ -108,8 +108,5 @@ const ProductWrapper = styled.div`
     color: var(--mainBlue);
     cursor: pointer;
   }
-  .name {
-    max-lines:2 !important;
-  }
 `;
 export default Product;

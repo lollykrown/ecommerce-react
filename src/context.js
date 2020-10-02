@@ -21,7 +21,7 @@ class ProductProvider extends Component {
     men:[],
     women:[],
     shoes: [],
-    house: [],
+    household: [],
     detailProduct,
     cart: [],
     totalItems:0,
@@ -92,7 +92,7 @@ class ProductProvider extends Component {
         men: tempMen,
         women: tempWomen,
         shoes: tempShoes,
-        house: tempHouse
+        household: tempHouse
        };
     });
   };
@@ -109,11 +109,11 @@ class ProductProvider extends Component {
     return product;    
   };
 
-  // getIt = (id) => {
-  //     const product = this.state.products.find((item) => item.id === id);
-  //     return product;    }
-  // }
-
+  handleFrame = (product) => {
+    this.setState(() => {
+      return { detailProduct: product };
+    });
+  }
   handleDetail = (category, id) => {
     const product = this.getItem(category, id);
     this.setState(() => {
@@ -258,6 +258,7 @@ class ProductProvider extends Component {
       <ProductContext.Provider
         value={{
           ...this.state,
+          handleFrame: this.handleFrame,
           handleDetail: this.handleDetail,
           addToCart: this.addToCart,
           openModal:this.openModal,

@@ -18,7 +18,7 @@ export default function ItemList({ value }) {
     {
       id: 2,
       icon: "fas fa-medkit",
-      name: "health & beauty",
+      name: "beauty",
       subcategories: [
         "Powder",
         "Mascara",
@@ -32,7 +32,7 @@ export default function ItemList({ value }) {
     {
       id: 3,
       icon: "fas fa-clock",
-      name: "watches",
+      name: "jewelry",
       subcategories: [
         "Wrist watches",
         "Bracelets",
@@ -42,7 +42,7 @@ export default function ItemList({ value }) {
     {
       id: 4,
       icon: "fas fa-mobile",
-      name: "phones & tablets",
+      name: "phones",
       subcategories: [
         "Smartphones",
         "Basic Phones",
@@ -119,7 +119,7 @@ export default function ItemList({ value }) {
     {
       id: 11,
       icon: "fas fa-home",
-      name: "household items",
+      name: "household",
       subcategories: ["Rugs", "Mats", "Pillows", "Jugs"],
     },
     {

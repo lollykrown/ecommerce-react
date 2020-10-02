@@ -26,9 +26,22 @@ body {
 .text-blue {
   color: var(--mainBlue) !important
 }
-
+.black {
+  color: var(--mainDark) !important
+}
 .text-bright {
   color: var(--lightBlue) !important
+}
+
+.name {
+  max-lines:1 !important;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.me:hover{
+  text-decoration:none !important;
 }
 
 .btn-black {
