@@ -82,7 +82,7 @@ export default class Home extends Component {
               const { phones,accessories,kids,jewelry,men,women,house } = value;
               if (phones.length > 0 && kids.length > 0){
                 const phone = phones.splice(0, 3)
-                const accessory = accessories.splice(0, 3)
+                const accessory = accessories.splice(1, 3)
                 const kid = kids.splice(0, 3)
                 const jewel = jewelry.splice(0, 3)
                 const me = men.splice(0, 3)
