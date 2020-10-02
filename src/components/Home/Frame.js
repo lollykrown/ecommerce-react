@@ -13,7 +13,7 @@ export default class Frame extends Component {
                             <div className="row no-gutters">
                                 <div className="col-md-4">
                                     <img src={p.imgUrls[0] || p.imgUrls[1] || p.imgUrls[3] || p.imgUrls[4]} 
-                                    className="card-img" alt="..."/>
+                                    className="card-img" alt="product"/>
                                 </div>
                                 <div className="col-md-8">
                                     <div className="card-body">
@@ -27,40 +27,6 @@ export default class Frame extends Component {
                     </div>
                 )
             )}
-
-            {/* <div className="col-10 col-lg-4 pl-0 pr-2">  
-                <div className="card mb-3">
-                    <div className="row no-gutters">
-                        <div className="col-md-4">
-                            <img src="img/product-1.png" className="card-img" alt="..."/>
-                        </div>
-                        <div className="col-md-8">
-                            <div className="card-body">
-                                <h5 className="card-title">A samsung phone</h5>
-                                <p className="card-text">&#8358; 18000</p>
-                                <p className="card-text"><small className="text-muted">Discount</small></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div className="col-10 col-lg-4 pl-0 pr-2">  
-                <div className="card mb-3">
-                    <div className="row no-gutters">
-                        <div className="col-md-4">
-                            <img src="img/product-4.png" className="card-img" alt="..."/>
-                        </div>
-                        <div className="col-md-8">
-                            <div className="card-body">
-                                <h5 className="card-title">A samsung phone</h5>
-                                <p className="card-text">&#8358; 18000</p>
-                                <p className="card-text"><small className="text-muted">Discount</small></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-         */}
         </div>
       </div>
     );

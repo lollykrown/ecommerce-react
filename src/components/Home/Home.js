@@ -82,13 +82,13 @@ export default class Home extends Component {
                 console.log(kids.splice(0, 3));
                 const phone = phones.splice(0, 3)
                 const kid = kids.splice(0, 3)
-                const beauty = beauty.splice(0, 3)
+                const beaut = beauty.splice(0, 3)
 
               return (
               <React.Fragment>
                   <Frame products={phone} className="mx-xs-0 mx-lg-4 px-lg-4" />
                   <Frame products={kid} className="mx-xs-0 mx-lg-4 px-lg-4" />
-                  <Frame products={beauty} className="mx-xs-0 mx-lg-4 px-lg-4" />
+                  <Frame products={beaut} className="mx-xs-0 mx-lg-4 px-lg-4" />
               </React.Fragment>
               )}
           }}
