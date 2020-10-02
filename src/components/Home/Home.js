@@ -77,18 +77,22 @@ export default class Home extends Component {
     
         <ProductConsumer>
           {(value) => {
-              const { phones, kids, beauty } = value;
+              const { phones, accessories, kids, beauty, jewelry } = value;
               if (phones.length > 0 && kids.length > 0){
-                console.log(kids.splice(0, 3));
                 const phone = phones.splice(0, 3)
+                const accessory = accessories.splice(0, 3)
                 const kid = kids.splice(0, 3)
                 const beaut = beauty.splice(0, 3)
-
+                const jewel = jewelry.splice(0, 3)
+                console.log(jewel)
               return (
               <React.Fragment>
                   <Frame products={phone} className="mx-xs-0 mx-lg-4 px-lg-4" />
+                  <Frame products={accessory} className="mx-xs-0 mx-lg-4 px-lg-4" />
                   <Frame products={kid} className="mx-xs-0 mx-lg-4 px-lg-4" />
                   <Frame products={beaut} className="mx-xs-0 mx-lg-4 px-lg-4" />
+                  <Frame products={jewel} className="mx-xs-0 mx-lg-4 px-lg-4" />
+
               </React.Fragment>
               )}
           }}

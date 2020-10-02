@@ -109,11 +109,6 @@ class ProductProvider extends Component {
     return product;    
   };
 
-  // getIt = (id) => {
-  //     const product = this.state.products.find((item) => item.id === id);
-  //     return product;    }
-  // }
-
   handleDetail = (category, id) => {
     const product = this.getItem(category, id);
     this.setState(() => {
