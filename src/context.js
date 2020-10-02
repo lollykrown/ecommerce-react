@@ -92,7 +92,7 @@ class ProductProvider extends Component {
         men: tempMen,
         women: tempWomen,
         shoes: tempShoes,
-        household: tempHouse
+        house: tempHouse
        };
     });
   };

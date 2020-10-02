@@ -119,7 +119,7 @@ export default function ItemList({ value }) {
     {
       id: 11,
       icon: "fas fa-home",
-      name: "household",
+      name: "house",
       subcategories: ["Rugs", "Mats", "Pillows", "Jugs"],
     },
     {
