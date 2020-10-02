@@ -57,7 +57,7 @@ class ProductList extends Component {
                 <ProductConsumer>
                   {value => {
                     if(this.props.cat === 'phones'){
-                      return value.products.map(product => {
+                      return value.phones.map(product => {
                         return <Product key={product.id}
                         product={product} />
                       })

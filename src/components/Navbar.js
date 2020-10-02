@@ -1,11 +1,138 @@
-import React, { Component } from "react";
+import React from "react";
 import { ProductConsumer } from "../context";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { ButtonContainer } from "./Button";
 
-class Navbar extends Component {
-  render() {
+function  Navbar() {
+  const items = [
+    {
+      id: 1,
+      icon: "fas fa-tshirt",
+      name: "accessories",
+      subcategories: [
+        "Clothings",
+        "Shoes",
+        "Jewelries",
+        "handbags/Wallets",
+        "Accessories",
+      ],
+    },
+    {
+      id: 2,
+      icon: "fas fa-medkit",
+      name: "health & beauty",
+      subcategories: [
+        "Powder",
+        "Mascara",
+        "Eyeshadow",
+        "Shampoo",
+        "Wigs",
+        "Cream",
+        "Deodorants",
+      ],
+    },
+    {
+      id: 3,
+      icon: "fas fa-clock",
+      name: "watches",
+      subcategories: [
+        "Wrist watches",
+        "Bracelets",
+        "Necklaces"
+      ],
+    },
+    {
+      id: 4,
+      icon: "fas fa-mobile",
+      name: "phones & tablets",
+      subcategories: [
+        "Smartphones",
+        "Basic Phones",
+        "iPads",
+        "Tablets",
+        "Accessories",
+      ],
+    },
+    {
+      id: 5,
+      icon: "fas fa-male",
+      name: "men",
+      subcategories: [
+        "Shirts",
+        "Hoodies",
+        "Pajamas",
+        "Boxers",
+        "Robes",
+        "Joggers",
+        "Trousers"
+      ],
+    },
+    {
+      id: 6,
+      icon: "fas fa-female",
+      name: "women",
+      subcategories: [
+        "Tops",
+        "Gowns",
+        "Jumpsuits",
+        "Blouses",
+        "Hoodies",
+        "Shirts"
+      ],
+    },
+    {
+      id: 7,
+      icon: "fas fa-child",
+      name: "kids",
+      subcategories: ["Diapers", "Toys", "Feeds", "kids"],
+    },
+    {
+      id: 8,
+      icon: "fas fa-shopping-bag",
+      name: "shoes",
+      subcategories: ["Loafers", "mocasin", "sneakers", "ladies' shoes"],
+    },
+    {
+      id: 9,
+      icon: "fas fa-shopping-basket",
+      name: "supermarket",
+      subcategories: [
+        "Drinks",
+        "Grains",
+        "Pasta",
+        "Juices",
+        "Cereals",
+        "Noodles",
+      ],
+    },
+    {
+      id: 10,
+      icon: "fas fa-futbol",
+      name: "sporting goods",
+      subcategories: [
+        "Dumbells",
+        "Trainers",
+        "Ropes",
+        "Nikes",
+        "Treadmills",
+        "Balls",
+      ],
+    },
+    {
+      id: 11,
+      icon: "fas fa-home",
+      name: "household items",
+      subcategories: ["Rugs", "Mats", "Pillows", "Jugs"],
+    },
+    {
+      id: 12,
+      icon: "fas fa-dot-circle",
+      name: "other",
+      subcategories: ["Books", "Movies", "Pets", "Musical", "Instruments"],
+    },
+  ];
+
     return (
       <NavWrapper className="navbar navbar-expand-sm bg-primary navbar-dark px-sm-5">
         <Link to="/">
@@ -29,13 +156,15 @@ class Navbar extends Component {
                 Home <span className="sr-only">(current)</span>
               </Link>
             </li>
-            <li class="nav-item dropdown">
-              <Link to="/" className="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <li className="nav-item dropdown">
+              <Link to="/" className="nav-link text-white dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 categories
               </Link>
-              {/* <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-                <ItemList />
-              </div> */}
+              <div className="dropdown-menu" aria-labelledby="navbarDropdown">
+                {items.map(item => <Link key={item.id} className="dropdown-item text-capitalize" to={`/${item.name}`}>{item.name}</Link>)}
+                <div className="line"></div>
+                <Link className="dropdown-item" to="/">Settings</Link>
+              </div>
             </li>
             <li className="nav-item ml-2">
               <Link to="/" className="nav-link">
@@ -92,7 +221,6 @@ class Navbar extends Component {
         </div>
       </NavWrapper>
     );
-  }
 }
 
 const NavWrapper = styled.nav`
