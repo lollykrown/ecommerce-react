@@ -167,17 +167,17 @@ function  Navbar() {
               </div>
             </li>
             <li className="nav-item ml-2">
-              <Link to="/" className="nav-link">
+              <Link to="/" className="nav-link text-white">
                 Store Locator
               </Link>
             </li>
             <li className="nav-item ml-4 d-none d-lg-block">
-              <Link to="/" className="nav-link">
+              <Link to="/" className="nav-link text-white">
                 help
               </Link>
             </li>
             <li className="nav-item ml-4">
-              <Link to="/" className="nav-link">
+              <Link to="/" className="nav-link text-white">
                 contact us
               </Link>
             </li>
@@ -195,12 +195,12 @@ function  Navbar() {
           </form>
           <ul className="navbar-nav align-items-center ml-auto">
             <li className="nav-item ml-4">
-              <Link to="/" className="nav-link">
+              <Link to="/" className="nav-link text-white">
                 sell
               </Link>
             </li>
             <li className="nav-item ml-4">
-              <Link to="/" className="nav-link">
+              <Link to="/" className="nav-link text-white">
                 login/signup
               </Link>
             </li>

@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 export default function CartItem({item, value}) {
     const { id, category, name, imgUrls, price, total, count } = item;
     const { increment, decrement, removeItem, handleDetail } = value
+
+    console.log('cartItem', category)
   return (
       <div className="row my-2 text-capitalize text-center">
         <div className="col-10 mx-auto col-lg-2" onClick={()=>handleDetail(category, id)}>
