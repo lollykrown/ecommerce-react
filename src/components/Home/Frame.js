@@ -6,14 +6,14 @@ import { ProductConsumer } from "../../context";
 export default class Frame extends Component {
   render() {
     return (
-      <div className="container custom-bg black">
-        <Title name="Recommended for you" link={this.props.products[0].category} title="" see="see more..." />
         <ProductConsumer>
         {value => (
+      <div className="container custom-bg black">
+        <Title name="Recommended for you" link={this.props.products[0].category} title="" see="see more..." />
         <div className="row my-4 ml-1 text-capitalize">
             {this.props.products.map(p => ( 
                 <Link key={p.id} className="me black col-10 col-lg-4 pl-0 pr-2 my-card"
-                onClick={()=>value.handleDetail(p.category, p.id)} to={{pathname:"/details", state: {from:this.props.location}}}>  
+                onClick={()=>value.handleFrame(p)} to={{pathname:"/details", state: {from:this.props.location}}}>  
                     <div className="card mb-3">
                         <div className="row no-gutters">
                             <div className="col-md-4">
@@ -30,12 +30,13 @@ export default class Frame extends Component {
                         </div>
                     </div>
                 </Link>
+
                 )
             )}
         </div>
-        )}
-        </ProductConsumer>
       </div>
+                              )}
+                              </ProductConsumer>
     );
   }
 }

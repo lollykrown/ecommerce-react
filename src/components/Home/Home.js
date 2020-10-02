@@ -6,15 +6,17 @@ import Frame from "./Frame";
 import TextFrame from "./TextFrame";
 import { Link } from "react-router-dom";
 
-import {accessoriesProducts} from '../../data/accessories';
-import {kidsProducts} from '../../data/kids';
-import {beautyProducts} from '../../data/beauty';
+import { accessoriesProducts } from '../../data/accessories';
+import { kidsProducts } from '../../data/kids';
+import { beautyProducts } from '../../data/beauty';
+import { phones } from "../../data/data";
 
 export default class Home extends Component {
   state = {
     accessories: accessoriesProducts,
     kids: kidsProducts,
-    beauty: beautyProducts
+    beauty: beautyProducts,
+    phones
   };
   render() {
     return (
@@ -77,22 +79,24 @@ export default class Home extends Component {
     
         <ProductConsumer>
           {(value) => {
-              const { phones, accessories, kids, beauty, jewelry } = value;
+              const { phones,accessories,kids,jewelry,men,women,household } = value;
               if (phones.length > 0 && kids.length > 0){
                 const phone = phones.splice(0, 3)
                 const accessory = accessories.splice(0, 3)
                 const kid = kids.splice(0, 3)
-                const beaut = beauty.splice(0, 3)
                 const jewel = jewelry.splice(0, 3)
-                console.log(jewel)
+                const me = men.splice(0, 3)
+                const wom = women.splice(0, 3)
+                const house = household.splice(7, 3)
               return (
               <React.Fragment>
                   <Frame products={phone} className="mx-xs-0 mx-lg-4 px-lg-4" />
                   <Frame products={accessory} className="mx-xs-0 mx-lg-4 px-lg-4" />
                   <Frame products={kid} className="mx-xs-0 mx-lg-4 px-lg-4" />
-                  <Frame products={beaut} className="mx-xs-0 mx-lg-4 px-lg-4" />
                   <Frame products={jewel} className="mx-xs-0 mx-lg-4 px-lg-4" />
-
+                  <Frame products={me} className="mx-xs-0 mx-lg-4 px-lg-4" />
+                  <Frame products={wom} className="mx-xs-0 mx-lg-4 px-lg-4" />
+                  <Frame products={house} className="mx-xs-0 mx-lg-4 px-lg-4" />
               </React.Fragment>
               )}
           }}

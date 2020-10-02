@@ -109,6 +109,11 @@ class ProductProvider extends Component {
     return product;    
   };
 
+  handleFrame = (product) => {
+    this.setState(() => {
+      return { detailProduct: product };
+    });
+  }
   handleDetail = (category, id) => {
     const product = this.getItem(category, id);
     this.setState(() => {
@@ -253,6 +258,7 @@ class ProductProvider extends Component {
       <ProductContext.Provider
         value={{
           ...this.state,
+          handleFrame: this.handleFrame,
           handleDetail: this.handleDetail,
           addToCart: this.addToCart,
           openModal:this.openModal,
