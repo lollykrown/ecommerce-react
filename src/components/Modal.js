@@ -11,7 +11,7 @@ export default function Modal(){
     const { imgUrls, name, price } = modalProduct;
   
     return ( 
-                    <ModalContainer>
+                <ModalContainer>
                     { modalOpen && 
                      (  
                             <div className="container">

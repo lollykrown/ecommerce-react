@@ -36,7 +36,7 @@ function App(){
           <Route component={Default} />
         </Switch>
         <Footer />
-        {/* <Modal/> */}
+        <Modal/>
       </React.Fragment>
     );
 }

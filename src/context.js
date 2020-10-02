@@ -120,15 +120,18 @@ export const ProductProvider = (props) => {
   }
 
   const addToCart = (category, id) => {
-    let tempProducts = state[category];
+    let prod = state[category];
+    let tempProducts = [...prod];
     const index = tempProducts.indexOf(getItem(category, id));
     const product = tempProducts[index];
     product.inCart = true;
     product.count = 1;
     const price = product.price;
     product.total = price;
-    setState(prev => prev[category] = tempProducts)
+    // setState(prev => prev[category] = tempProducts)
+    setState(state[category] = tempProducts)
     setCart([...cart, product])
+    
 
     addTotals();
   };
@@ -137,75 +140,58 @@ export const ProductProvider = (props) => {
     const product = getItem(category,id);
 
     setModalProduct(product)
-    setModalOpen(true)  }
+    setModalOpen(true)  
+  }
 
   const closeModal = () => {
-    this.setState(()=> {
-      return {modalOpen: false}
-    })
+    setModalOpen(false)
   }
 
   const increment = id => {
-    let tempCart = [...this.state.cart];
+    let tempCart = [...cart];
     const selectedProduct = tempCart.find(item => item.id === id);
     const index = tempCart.indexOf(selectedProduct);
     const product = tempCart[index];
     product.count += 1;
-    product.total = product.count * product.price   
+    const t = product.count * product.price   
+    product.total = parseFloat(t.toFixed(2)); 
 
-    this.setState(()=> {
-      return {
-        cart:[...tempCart],
-      }
-    },
-    ()=>{
-      this.addTotals()
-    })
-
+    setCart([...tempCart]);
+    addTotals()
   }
 
-  const decrement = id => {
-    let tempCart = [...this.state.cart];
+  const decrement = (cat,id) => {
+    let tempCart = [...cart];
     const selectedProduct = tempCart.find(item => item.id === id);
     const index = tempCart.indexOf(selectedProduct);
     const product = tempCart[index];
     product.count -= 1;
 
     if(product.count === 0){
-      this.removeItem(id)
+      removeItem(cat,id)
     }else {
-      product.total = product.count * product.price;
-    this.setState(()=> {
-      return {
-        cart:[...tempCart],
-      }
-    },
-    ()=>{
-      this.addTotals()
-    })
-  }
+      const t = product.count * product.price   
+      product.total = parseFloat(t.toFixed(2)); 
+      setCart([...tempCart]);
+      addTotals()
+    }
   }
 
-  const removeItem = id => {
-    let tempProducts = [...this.state.products];
-    let tempCart = [...this.state.cart];
+  const removeItem = (cat, id) => {
+    const prod = state[cat]
+    let tempProducts = [...prod];
+    let tempCart = [...cart];
 
     tempCart = tempCart.filter(item => item.id !== id)
-    const index = tempProducts.indexOf(this.getItem(id));
+    const index = tempProducts.indexOf(this.getItem(cat, id));
     let removedProduct = tempProducts[index]
     removedProduct.inCart = false
     removedProduct.count = 0;
     removedProduct.total = 0;
 
-    this.setState(()=> {
-      return {
-        cart:[...tempCart],
-        products: [...tempProducts]
-      }
-    },
-    ()=>{
-      this.addTotals()
-    })
+    setState(prev => prev[cat] = tempProducts)
+    setCart([...tempCart]);
+    addTotals();
   }
 
   const clearCart = () => {
