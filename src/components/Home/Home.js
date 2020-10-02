@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-// import { ProductConsumer } from "../../context";
+import { ProductConsumer } from "../../context";
 import MyCarousel from "./MyCarousel";
 import ItemList from "./ItemList";
 import Frame from "./Frame";
@@ -75,21 +75,24 @@ export default class Home extends Component {
           </div>
         </div>
     
-        <Frame elem="test" className="mx-xs-0 mx-lg-4 px-lg-4" />
-        <Frame elem='' className="mx-xs-0 mx-lg-4 px-lg-4" />
-        <Frame elem='' className="mx-xs-0 mx-lg-4 px-lg-4" />
-        {/* <ProductConsumer>
+        <ProductConsumer>
           {(value) => {
-              const { kids, beauty } = value;
-              if (kids !== 'undefined'){
-                // console.log(kids[0].name)
+              const { phones, kids, beauty } = value;
+              if (phones.length > 0 && kids.length > 0){
+                console.log(kids.splice(0, 3));
+                const phone = phones.splice(0, 3)
+                const kid = kids.splice(0, 3)
+                const beauty = beauty.splice(0, 3)
+
               return (
               <React.Fragment>
-                  <Frame elem="elem" className="mx-xs-0 mx-lg-4 px-lg-4" />
+                  <Frame products={phone} className="mx-xs-0 mx-lg-4 px-lg-4" />
+                  <Frame products={kid} className="mx-xs-0 mx-lg-4 px-lg-4" />
+                  <Frame products={beauty} className="mx-xs-0 mx-lg-4 px-lg-4" />
               </React.Fragment>
               )}
           }}
-         </ProductConsumer> */}
+         </ProductConsumer>
         <TextFrame className="mx-xs-0 mx-lg-4 px-lg-4" />
 
       </section>
