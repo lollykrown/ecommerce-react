@@ -48,7 +48,7 @@ export default class Home extends Component {
               <div className="col-6 col-lg-3 pl-0 pr-2 ">
                 <div className="card bg-primary">
                   <div className="card-body">
-                    Buy Airtime
+                    Buy Airtime Online
                   </div>
                 </div>
               </div>
