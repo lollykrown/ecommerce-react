@@ -1,24 +1,22 @@
 import React from 'react';
-import { Switch, Route } from 'react-router-dom'
+import { Container } from 'react-bootstrap'
 import './App.css';
-import 'popper.js/dist/umd/popper.min.js';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'jquery/dist/jquery.min.js';
-import 'bootstrap/dist/js/bootstrap.min.js';
 import Header from './components/Header';
+import Footer from './components/Footer';
 
+function App() {
 
-function App(){
-  
-    return (
-      <React.Fragment>
-        <Header/>
-        <Switch>
-          <Route exact path="/" component={Home} />
-        </Switch>
-        <Footer />
-      </React.Fragment>
-    );
+  return (
+    <React.Fragment>
+      <Header />
+      <main className="py-3">
+        <Container>
+          <h1>Welcome to ProShop</h1>
+        </Container>
+      </main>
+      <Footer />
+    </React.Fragment>
+  );
 }
 
 export default App;
