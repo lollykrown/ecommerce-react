@@ -169,17 +169,17 @@ export default function Navbar() {
                 <Link className="dropdown-item" to="/">Settings</Link>
               </div>
             </li>
-            <li className="nav-item ml-2">
+            {/* <li className="nav-item ml-2">
               <Link to="/" className="nav-link  text-white">
                 Store Locator
               </Link>
-            </li>
+            </li> 
             <li className="nav-item ml-4 d-none d-lg-block">
               <Link to="/" className="nav-link  text-white">
                 help
               </Link>
-            </li>
-            <li className="nav-item ml-4">
+            </li>*/}
+            <li className="nav-item ml-4 d-none d-lg-block">
               <Link to="/" className="nav-link  text-white">
                 contact us
               </Link>
@@ -192,17 +192,17 @@ export default function Navbar() {
               placeholder="Search"
               aria-label="Search"
             />
-            <span className="btn btn-warning text-white my-2 my-sm-0" type="submit">
+            <span className="btn btn-warning text-white my-2 my-sm-0 d-none d-lg-block" type="submit">
               <i className="fas fa-search"></i>
             </span>
           </form>
           <ul className="navbar-nav align-items-center ml-auto">
-            <li className="nav-item ml-4">
+            <li className="nav-item ml-4 d-none d-lg-block">
               <Link to="/" className="nav-link  text-white">
                 sell
               </Link>
             </li>
-            <li className="nav-item ml-4">
+            <li className="nav-item ml-4 d-none d-lg-block">
               <Link to="/" className="nav-link text-white">
                 login/signup
               </Link>
@@ -226,7 +226,7 @@ const NavWrapper = styled.nav`
   background: var(--mainPurple) !important;
   .nav-link {
     color: var(--mainWhite);
-    font-size: 1.3rem;
+    font-size: .95rem !important;
     text-transform: capitalize;
   }
 `;

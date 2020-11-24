@@ -116,18 +116,18 @@ export default function ItemList() {
         "Balls",
       ],
     },
-    {
-      id: 11,
-      icon: "fas fa-home",
-      name: "household items",
-      subcategories: ["Rugs", "Mats", "Pillows", "Jugs"],
-    },
-    {
-      id: 12,
-      icon: "fas fa-dot-circle",
-      name: "other",
-      subcategories: ["Books", "Movies", "Pets", "Musical", "Instruments"],
-    },
+    // {
+    //   id: 11,
+    //   icon: "fas fa-home",
+    //   name: "household items",
+    //   subcategories: ["Rugs", "Mats", "Pillows", "Jugs"],
+    // },
+    // {
+    //   id: 12,
+    //   icon: "fas fa-dot-circle",
+    //   name: "other",
+    //   subcategories: ["Books", "Movies", "Pets", "Musical", "Instruments"],
+    // },
   ];
   return (
     <div className="pl-3 ml-1 mt-1">

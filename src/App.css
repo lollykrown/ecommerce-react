@@ -88,13 +88,14 @@ body {
 }
 @media (min-width: 992px) {
   .custom-padd {
-    padding: 0 10rem !important;
+    padding: 0 5rem !important;
   }
 }
 
 a, .titl {
   text-decoration: none;
   color: var(--footerBlack);
+  font-size: .8em;
 }
 .titl:hover{
   text-decoration: none;
@@ -183,3 +184,6 @@ a, .titl {
   color: var(--mainPurple);
   text-decoration: none;
 }
+/* .nav-link{
+  font-size: .95em !important;
+} */
